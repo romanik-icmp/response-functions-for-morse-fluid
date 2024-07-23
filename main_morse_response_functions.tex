@@ -1,12 +1,18 @@
 \documentclass[12pt]{article}
 
-\usepackage{orcidlink} % to insert a hyperlinked ORCiD logo
+%\usepackage{orcidlink} % to insert a hyperlinked ORCiD logo
 \usepackage{amssymb}
-\usepackage{physics}
+%\usepackage{physics}
 %\usepackage{cite} % may be useful for different formats of numerical citation
 \usepackage{hyperref} % for hyperlinks in references
 
 \usepackage{caption} % for \caption*
+
+
+%**************
+\usepackage[pdftex]{graphicx}
+%**************
+
 
 \textwidth 160mm
 \textheight 230mm
@@ -40,9 +46,9 @@
 		U(r) = C_{H} \left[A {\rm e}^{-n_0(r-R_0)/\alpha} + {\rm e}^{-\gamma(r - R_0)/\alpha} -2{\rm e}^{-(r-R_0)/\alpha}\right],
 	\end{equation}
 	where $R_0$ is the coordinate of the potential minimum, $\alpha$ is an effective range of interaction, $\gamma$ and $n_0$ are parameters of the model. Other two constants $C_{H}$ and $A$ are expressed via $\gamma$ and $n_0$ as
-	\begin{equation*}
+	\begin{equation}
 		C_{H} = \frac{\varepsilon n_0}{n_0 + \gamma - 2}, \quad A = \frac{2 - \gamma}{n_0},
-	\end{equation*}
+	\end{equation}
 	where $\varepsilon$ is the depth of the potential well at $r=R_0$. This potential is reduced to the ordinary Morse potential~[Morse (1929)] at $\gamma=2$. For a more detailed discussion of such modified Morse potential, see Sections~1 and~2 in~[Kozlovskii $\&$ Dobush (2020)].
 	
 	Modifications of the Morse potential were used in other works as well. For example, in~[Martinez-Valencia at al. (2013)] a repulsive term in a form of a power of $r^{-1}$ was added to the ordinary Morse potential, and the influence of the softness of such a term was investigated on the coordinates of the critical point. The generalized form of the Morse potential was suggested in~[Biswas $\&$ Hamann (1985)]
@@ -62,9 +68,10 @@
 	
 	[EXPLICIT EXPRESSIONS FOR QUANTITIES ENTERING THE EQUATION OF STATE FOLLOW HERE OR REFERENCE IS MADE TO AN APPENDIX].
 	
-	Figure~1 shows the isotherms for the pressure $P$ following from the equation of state~\eqref{eq:eos}
+	Figure~1 shows the isotherms for the pressure $P$ following from the equation of state~\ref{eq:eos}
 	\begin{figure}[h!]
-		\centering \includegraphics[width=0.446\textwidth]{f1a1.pdf} 
+		%\centering 
+		\includegraphics[width=0.446\textwidth]{f1a1.pdf} 
 		\includegraphics[width=0.45\textwidth]{f1b1.pdf} 
 		\vskip-3mm\caption{Plots of isotherms of the pressure $P$ as a function of the density $\bar n$ (on the lefthand side) and a function of the effective chemical potential $M$ (on the righthand side) at $T \geq T_c$ represented by black lines. Thick grey lines on both figures correspond to isotherms of pressure at $T < T_c$ based on the results taken from [Kozlovskii $\&$ Dobush (2020)]. 
 		}\label{fig1}
