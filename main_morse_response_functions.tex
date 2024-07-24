@@ -10,8 +10,12 @@
 
 
 %**************
+%<<<<<<< HEAD
 \usepackage[pdftex]{graphicx}
 \usepackage{amsmath}    % for "\eqref" macro
+%=======
+\usepackage{graphicx}
+%>>>>>>> 3a31f0b6bd43223c1786eb91b76133393bfa7c2a
 %**************
 
 
@@ -39,7 +43,7 @@
 	}
 	\section{Introduction}
 	
-	In this work we continue our study of the thermodynamic behavior of a cell fluid model, which was defined in~[Kozytskii et al. (2018); Kozytskii et al. (2020)]. In~[Kozlovskii $\&$ Dobush (2020); Pylyuk $\&$ Dobush (2020); Pylyuk at al., J. Mol. Liq. (2023); Pylyuk at al., Ukr. J. Phys. (2023)] this model was used with a modified Morse potential describing the particle interaction. In particular, the equation of state was obtained in~[Kozlovskii $\&$ Dobush (2020)] in the zero-mode approximation. This equation of state is used in the current work to calculate thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient.
+	In this work we continue our study of the thermodynamic behavior of a cell fluid model, which was defined in~\cite{KozitskyKozlovskiiDobush2018book,KozitskyKozlovskiiDobush2020}. In works~\cite{KozlovskiiDobush2020,PylyukDobush2020,PylyukEtAlJML2023,PylyukKozlovskiiDobushUJP2023b} this model was used with a modified Morse potential describing the particle interaction. In particular, the equation of state was obtained in~\cite{KozlovskiiDobush2020} in the zero-mode approximation. This equation of state is used in the current work to calculate thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient.
 	
 	\section{The interaction potential}
 	The potential of interaction between particles is taken in a form of a modified Morse potential
@@ -50,25 +54,25 @@
 	\begin{equation}
 		C_{H} = \frac{\varepsilon n_0}{n_0 + \gamma - 2}, \quad A = \frac{2 - \gamma}{n_0},
 	\end{equation}
-	where $\varepsilon$ is the depth of the potential well at $r=R_0$. This potential is reduced to the ordinary Morse potential~[Morse (1929)] at $\gamma=2$. For a more detailed discussion of such modified Morse potential, see Sections~1 and~2 in~[Kozlovskii $\&$ Dobush (2020)].
+	where $\varepsilon$ is the depth of the potential well at $r=R_0$. This potential is reduced to the ordinary Morse potential~\cite{Morse1929} at $\gamma=2$. For a more detailed discussion of such modified Morse potential, see Sections~1 and~2 in~\cite{KozlovskiiDobush2020}.
 	
-	Modifications of the Morse potential were used in other works as well. For example, in~[Martinez-Valencia at al. (2013)] a repulsive term in a form of a power of $r^{-1}$ was added to the ordinary Morse potential, and the influence of the softness of such a term was investigated on the coordinates of the critical point. The generalized form of the Morse potential was suggested in~[Biswas $\&$ Hamann (1985)]
+	Modifications of the Morse potential were used in other works as well. For example, in~\cite{MartinezValenciaEtAl2013} a repulsive term in a form of a power of $r^{-1}$ was added to the ordinary Morse potential, and the influence of the softness of such a term was investigated on the coordinates of the critical point. The generalized form of the Morse potential was suggested in~\cite{BiswasHamann1985}
 	\begin{equation}
 		U(r) = A_1 {\rm e}^{-\lambda_1 r} + A_2 {\rm e}^{-\lambda_2 r}
 	\end{equation} 
-	with application to silicon structural energies, and was also considered in~[Lim, Acta Chim. Slov. (2005)] as the potential for Be-S and H-Na compounds.
+	with application to silicon structural energies, and was also considered in~\cite{Lim2005} as the potential for Be-S and H-Na compounds.
 	
-	Our modification contains an additional repulsive term, similar to~[Martinez-Valencia at al. (2013)], as well as introduces parameter $\gamma$, which can vary as opposed to being strictly equal to 2 in the Morse potential. Including the repulsive term enables us to single out a reference system and apply the method of collective variables to calculating the grand partition function~[REFERENCE NEEDED].
+	Our modification contains an additional repulsive term, similar to~\cite{MartinezValenciaEtAl2013}, as well as introduces parameter $\gamma$, which can vary as opposed to being strictly equal to 2 in the Morse potential. Including the repulsive term enables us to single out a reference system and apply the method of collective variables to calculating the grand partition function~[REFERENCE NEEDED].
 	
 	\section{The equation of state}
-	The equation of state obtained in [Kozlovskii $\&$ Dobush (2020)] reads
+	The equation of state obtained in~\cite{KozlovskiiDobush2020} reads
 	\begin{equation}
 		\label{eq:eos}
 		Pv\beta = E_\mu(M, T) + M \bar \rho_0 + \frac{1}{2} \tilde D(0) \bar \rho_0^2 - \frac{a_4}{24} \bar \rho_0^4.
 	\end{equation}
 	[EXPLICIT EXPRESSIONS FOR QUANTITIES ENTERING THE EQUATION OF STATE FOLLOW HERE OR REFERENCE IS MADE TO AN APPENDIX].
 	The latter expression links the pressure $P$, the temperature $T$ ($\beta = 1/T$ is the inverse temperature), the cell's volume $v$ and the effective chemical potential $M$. In general $M$ is a function of the real chemical potential $\mu$:
-	\begin{align}
+	\begin{align}\label{chem_pot}
 		&	M = \frac{\tilde\mu}{W(0)} + g_1 + n_c \tilde D(0) - \frac{1}{6} \frac{g_3^3}{g_4^2}, \\
 		&	\tilde\mu=\mu-\mu^*(1+\tau),
 	\end{align}
@@ -95,7 +99,7 @@
 	\begin{equation}
 	p = \frac{\beta_c}{2} \Phi^{(r)}(0) [\chi_0 + A_\gamma].
 	\end{equation} 
-	Note that we denote $\beta_c$ as the inverse critical temperature. Since $p$ fails to be the function of temperature, the coefficients $g_n$ are also temperature-free. The quantity $\tilde D(0)$ which has already appeared in both equations \eqref{eq:eos} and \eqref{3d2} is a function of temperature
+	Note that we denote $\beta_c$ as the inverse critical temperature. Since $p$ fails to be the function of temperature, the coefficients $g_n$ are also temperature-free. The quantity $\tilde D(0)$ which has already appeared in both equations \eqref{eq:eos} and \eqref{chem_pot} is a function of temperature
 	\begin{equation}
 	\tilde D(0) = g_2 - \frac{1}{2} \frac{g_3^2}{g_4} - \frac{1}{\beta W(0)},
 	\end{equation}
@@ -130,7 +134,7 @@
 		%\centering 
 		\includegraphics[width=0.446\textwidth]{f1a1.pdf} 
 		\includegraphics[width=0.45\textwidth]{f1b1.pdf} 
-		\vskip-3mm\caption{Plots of isotherms of the pressure $P$ as a function of the density $\bar n$ (on the lefthand side) and a function of the effective chemical potential $M$ (on the righthand side) at $T \geq T_c$ represented by black lines. Thick grey lines on both figures correspond to isotherms of pressure at $T < T_c$ based on the results taken from [Kozlovskii $\&$ Dobush (2020)]. 
+		\vskip-3mm\caption{Plots of isotherms of the pressure $P$ as a function of the density $\bar n$ (on the lefthand side) and a function of the effective chemical potential $M$ (on the righthand side) at $T \geq T_c$ represented by black lines. Thick grey lines on both figures correspond to isotherms of pressure at $T < T_c$ based on the results taken from~\cite{KozlovskiiDobush2020}. 
 		}\label{fig1}
 	\end{figure}
 	
@@ -185,6 +189,9 @@
 	Thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient, are calculated for a many-particle system interacting through a modified Morse potential.
 	
 	%\bibliographystyle{cmpj} % still looking for the best style
-	%\bibliography{fluids_general} % BibTeX / BibLaTeX should be used
+	\bibliographystyle{elsarticle-num}
+	%\bibliographystyle{unsrturl}
+	%\bibliography{fluids_general,fluids_cv} % BibTeX / BibLaTeX should be used
+	\bibliography{extracted}
 	
 \end{document}
