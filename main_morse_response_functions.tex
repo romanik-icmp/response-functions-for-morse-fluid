@@ -1,21 +1,18 @@
 \documentclass[12pt]{article}
 
-%\usepackage{orcidlink} % to insert a hyperlinked ORCiD logo
+\usepackage{orcidlink} % to insert a hyperlinked ORCiD logo
 \usepackage{amssymb}
 \usepackage{physics}
-%\usepackage{cite} % may be useful for different formats of numerical citation
+\usepackage{cite} % may be useful for different formats of numerical citation
 \usepackage{hyperref} % for hyperlinks in references
 
 \usepackage{caption} % for \caption*
 
 
 %**************
-%<<<<<<< HEAD
-\usepackage[pdftex]{graphicx}
-\usepackage{amsmath}    % for "\eqref" macro
-%=======
+%\usepackage[pdftex]{graphicx}
+%\usepackage{amsmath}    % for "\eqref" macro
 \usepackage{graphicx}
-%>>>>>>> 3a31f0b6bd43223c1786eb91b76133393bfa7c2a
 %**************
 
 
@@ -150,7 +147,7 @@
 	The isothermal compressibility is defined by
 	\begin{equation}
 		\label{def:isotherm_compres}
-		K_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T
+		K_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,<N>}
 	\end{equation}
 	
 	\begin{figure}[h!]
@@ -170,26 +167,45 @@
 	The thermal pressure coefficient is defined by
 	\begin{equation}
 		\label{def:therm_pres_coef}
-		\beta_V = \left( \frac{\partial P}{\partial T} \right)_V
+		\beta_V = \left( \frac{\partial P}{\partial T} \right)_{V,<N>}
 	\end{equation}
 	
 	\begin{figure}[h!]
-		\centering \includegraphics[width=0.5\textwidth]{f3.pdf}
-		\vskip-3mm\caption{The thermal pressure coefficient $\beta_V$ as a function of the density $\bar n$ at different values of reduced temperature $\tau > 0$ ($T > T_c$). 
-		}\label{fig3}
+		\centering \includegraphics[width=0.5\textwidth]{f3a.pdf}
+		\vskip-3mm\caption{The thermal pressure coefficient $\beta_V$ as a function of the density $\bar n$ at different values of relative temperature $\tau > 0$ ($T > T_c$). 
+		}\label{fig3a}
+	\end{figure}
+	\begin{figure}[h!]
+		\centering \includegraphics[width=0.5\textwidth]{f3b.pdf}
+		\vskip-3mm\caption{The thermal pressure coefficient $\beta_V$ as a function of the effective chemical potential $M$ at different values of relative temperature $\tau > 0$ ($T > T_c$). 
+		}\label{fig3b}
+	\end{figure}
+	\begin{figure}[h!]
+		\centering \includegraphics[width=0.5\textwidth]{f3c.pdf}
+		\vskip-3mm\caption{The thermal pressure coefficient $\beta_V$ as a function of the relative temperature $\tau$ at different values of the density $\eta$. 
+		}\label{fig3c}
 	\end{figure}
 	
 	\subsection{Thermal expansion coefficient}
 	The thermal expansion coefficient is defined by
 	\begin{equation}
-		\alpha_P = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P
+		\alpha_P = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P,<N>}
 	\end{equation}
 	
 	\begin{figure}[h!]
-		\centering \includegraphics[width=0.5\textwidth]{f4.pdf}
-		\vskip-3mm\caption{The thermal expansion coefficient $\alpha_P$ as a function of the density $\bar n$ at different values of reduced temperature $\tau > 0$ ($T > T_c$). 
-		}\label{fig4}
+		\centering \includegraphics[width=0.5\textwidth]{f4a.pdf}
+		\vskip-3mm\caption{The thermal expansion coefficient $\alpha_P$ as a function of the density $\bar n$ at different values of relative temperature $\tau > 0$ ($T > T_c$). 
+		}\label{fig4a}
 	\end{figure}
+	
+		\begin{figure}[h!]
+		\centering \includegraphics[width=0.45\textwidth]{f4b.pdf}
+		\includegraphics[width=0.475\textwidth]{f4c.pdf}
+		\vskip-3mm\caption{The thermal expansion coefficient $\alpha_P$ as a function of the effective chemical potential $M$ for different temperatures $\tau = (T - T_c)/T_c$ at $T > T_c$. The two figures differ in the scale of $M$. The left-hand-side figure covers a wider range of $M$, while the right-hand-side one focuses on a range of $M$ around its critical value $0$.
+		}\label{fig4b}
+	\end{figure}
+	
+	\newpage 
 	
 	\section{Conclusions}
 	Thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient, are calculated for a many-particle system interacting through a modified Morse potential.
