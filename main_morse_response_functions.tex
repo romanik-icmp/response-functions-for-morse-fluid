@@ -5,15 +5,18 @@
 \usepackage{physics}
 \usepackage{cite} % may be useful for different formats of numerical citation
 \usepackage{hyperref} % for hyperlinks in references
-
 \usepackage{caption} % for \caption*
-
-
-%**************
-%\usepackage[pdftex]{graphicx}
-%\usepackage{amsmath}    % for "\eqref" macro
+\usepackage{amsmath}    % for "\eqref" macro
 \usepackage{graphicx}
-%**************
+
+
+
+
+
+
+
+
+
 
 
 \textwidth 160mm
@@ -88,11 +91,11 @@
 	\end{align}
 	and $\Phi^{(r)}(0)$ is the Fourier transform of the repulsive part of the potential at $\abs{\vb k}=0$. The parameter $\chi_0$ is used in~\cite{KozlovskiiDobush2020} to single out a term in the Fourier transform of the potential that is treated as a reference system defined in the reciprocal space, and is selected as $\chi_0 = 0.07$.
 	
-	
 	The coefficients $g_n$ are given by the formulas:
 	\begin{align}
 		& g_0 = \ln T_0, \qquad g_1 = T_1/T_0, \qquad g_2 = T_2/T_0 - g_1^2,  \nonumber \\
-		& g_3 = T_3/T_0 - g_1^3 - 3g_1 g_2, \quad \qquad  g_4 = T_4/T_0 - g_1^4 - 6 g_1^2 g_2 - 4 g_1 g_3 - 3 g_2^2,
+		& g_3 = T_3/T_0 - g_1^3 - 3g_1 g_2, \quad \qquad  g_4 = T_4/T_0 - g_1^4 - 6 g_1^2 g_2 - 4 g_1 g_3 - 3 g_2^2, \\
+		& n_c = -g_3/g_4, \nonumber
 	\end{align}
 	where $T_n(p,\alpha^*)$ are the following special functions
 	\begin{equation}
@@ -102,14 +105,21 @@
 	\begin{equation}
 	p = \frac{\beta_c}{2} \Phi^{(r)}(0) [\chi_0 + A_\gamma].
 	\end{equation} 
-	Note that we denote $\beta_c$ as the inverse critical temperature. Since $p$ fails to be the function of temperature, the coefficients $g_n$ are also temperature-free. The quantity $\tilde D(0)$ which has already appeared in both equations \eqref{eq:eos} and \eqref{chem_pot} is a function of temperature
+	The quantity $\beta_c$ denotes the critical value of the inverse temperature.
+	Since $p$ is independent of temperature, the coefficients $g_n$ are also independent of temperature. The numerical values for other coefficients used in this paper are the same as those in~\cite{KozlovskiiDobush2020}:
+	\begin{equation*}
+		\alpha^* = 5.0, \quad \gamma = 1.65, \quad n_0 = 1.521.
+	\end{equation*}
+	
+	The quantity $\tilde D(0)$ entering equations~\eqref{eq:eos} and~\eqref{chem_pot} is a function of temperature
 	\begin{equation}
-	\tilde D(0) = g_2 - \frac{1}{2} \frac{g_3^2}{g_4} - \frac{1}{\beta W(0)},
+	\tilde D(0) = g_2 - \frac{1}{2} \frac{g_3^2}{g_4} - \frac{1}{\beta W(0)}.
 	\end{equation}
-	which equals zero at $T=T_c$. This circumstance gives us an expression for determining the critical temperature 
+	The condition $\tilde{D}(0) = 0$ defines the critical temperature~\cite{KozlovskiiDobush2020}
 	\begin{equation}
 		T_c = \left(g_2 - \frac{1}{2} \frac{g_3^2}{g_4} \right) (B - 1 + \chi_0) \Phi^{(r)}(0).
 	\end{equation}    
+	
 	The function $E_\mu(M, T)$ from the equation \eqref{eq:eos} is provided by
 	\begin{align}
 		& E_\mu (M, T) = - \frac{1}{2 N_v} \ln (2\pi \beta W(0)) +  g_0 - \frac{\beta W(0)}{2} \!\! \left( \! \frac{\tilde\mu}{W(0)} \! \right)^{\! 2} \!\!\! - \frac{g_3}{g_4} {M} \! - \frac{g_3^2}{2 g_4^2}  \tilde D(0) - \frac{1}{24} \frac{g_3^4}{g_4^3}. 
