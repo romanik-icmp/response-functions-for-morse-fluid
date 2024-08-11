@@ -9,16 +9,6 @@
 \usepackage{amsmath}    % for "\eqref" macro
 \usepackage{graphicx}
 
-
-
-
-
-
-
-
-
-
-
 \textwidth 160mm
 \textheight 230mm
 \voffset = -20mm
@@ -49,11 +39,11 @@
 	The potential of interaction between particles is taken in a form of a modified Morse potential
 	\begin{equation}
 		\label{def:mod_morse}
-		U(r) = C_{H} \left[A {\rm e}^{-n_0(r-R_0)/\alpha} + {\rm e}^{-\gamma(r - R_0)/\alpha} -2{\rm e}^{-(r-R_0)/\alpha}\right],
+		U(r) = \varepsilon C_{H} \left[A {\rm e}^{-n_0(r-R_0)/\alpha} + {\rm e}^{-\gamma(r - R_0)/\alpha} -2{\rm e}^{-(r-R_0)/\alpha}\right],
 	\end{equation}
 	where $R_0$ is the coordinate of the potential minimum, $\alpha$ is an effective range of interaction, $\gamma$ and $n_0$ are parameters of the model. Other two constants $C_{H}$ and $A$ are expressed via $\gamma$ and $n_0$ as
 	\begin{equation}
-		C_{H} = \frac{\varepsilon n_0}{n_0 + \gamma - 2}, \quad A = \frac{2 - \gamma}{n_0},
+		C_{H} = \frac{n_0}{n_0 + \gamma - 2}, \quad A = \frac{2 - \gamma}{n_0},
 	\end{equation}
 	where $\varepsilon$ is the depth of the potential well at $r=R_0$. This potential is reduced to the ordinary Morse potential~\cite{Morse1929} at $\gamma=2$. For a more detailed discussion of such modified Morse potential, see Sections~1 and~2 in~\cite{KozlovskiiDobush2020}.
 	
@@ -66,7 +56,7 @@
 	Our modification contains an additional repulsive term, similar to~\cite{MartinezValenciaEtAl2013}, as well as introduces parameter $\gamma$, which can vary as opposed to being strictly equal to 2 in the Morse potential. Including the repulsive term enables us to single out a reference system and apply the method of collective variables to calculating the grand partition function~[REFERENCE NEEDED].
 	
 	\section{The equation of state}
-	The equation of state obtained in~\cite{KozlovskiiDobush2020} reads
+	The equation of state obtained in~\cite[see Eq.(42)]{KozlovskiiDobush2020} reads
 	\begin{equation}
 		\label{eq:eosMT}
 		Pv\beta = E_\mu(M, T) + M \bar \rho_0 + \frac{1}{2} \tilde D(0) \bar \rho_0^2 - \frac{a_4}{24} \bar \rho_0^4.
@@ -85,11 +75,17 @@
 	W(0) = \Phi^{(r)}(0) \left[ B - 1 + \chi_0 + \tau (\chi_0 + A_\gamma) \right],
 	\end{equation}
 	where
-	\begin{align} 
-		& B = 2 \gamma^3 e^{(1-\gamma)/\alpha},\nonumber \\
-		& A_\gamma = A e^{(n_0-\gamma)/\alpha} \left( \gamma / n_0\right)^3,
-	\end{align}
-	and $\Phi^{(r)}(0)$ is the Fourier transform of the repulsive part of the potential at $\abs{\vb k}=0$. The parameter $\chi_0$ is used in~\cite{KozlovskiiDobush2020} to single out a term in the Fourier transform of the potential that is treated as a reference system defined in the reciprocal space, and is selected as $\chi_0 = 0.07$.
+	\begin{align*} 
+		& B = 2 \gamma^3 e^{(1-\gamma)R_0/\alpha},
+		\nonumber \\
+		& A_\gamma = A e^{(n_0-\gamma)R_0/\alpha} \left( \gamma / n_0\right)^3, 
+	\end{align*}
+	and $\Phi^{(r)}(0)$ is the Fourier transform of the repulsive part of the potential at $\abs{\vb k}=0$
+	\begin{equation*}
+		\Phi^{(r)}(0) = \varepsilon C_H 8\pi {\rm e}^{\gamma R_0/\alpha} \left(\frac{\alpha}{\gamma}\right)^3.
+	\end{equation*}
+	
+	The parameter $\chi_0$ is used in~\cite{KozlovskiiDobush2020} to single out a contribution in the Fourier transform of the potential that is treated as a reference system defined in the reciprocal space, and is selected as $\chi_0 = 0.07$~\cite[see Eq.(24)]{KozlovskiiDobush2020}.
 	
 	The coefficients $g_n$ are given by the formulas:
 	\begin{align}
@@ -105,10 +101,12 @@
 	p = \frac{\beta_c}{2} \Phi^{(r)}(0) [\chi_0 + A_\gamma].
 	\end{equation} 
 	The quantity $\beta_c$ denotes the critical value of the inverse temperature.
-	Since $p$ is independent of temperature, the coefficients $g_n$ are also independent of temperature. The numerical values for other coefficients used in this paper are the same as those in~\cite{KozlovskiiDobush2020}:
-	\begin{equation*}
-		\alpha^* = 5.0, \quad \gamma = 1.65, \quad n_0 = 1.521.
-	\end{equation*}
+	Since $p$ is independent of temperature, the coefficients $g_n$ are also independent of temperature. The numerical values for other coefficients used in this paper are the same as those in~\cite[see Eqs.(5), (23), and (24)]{KozlovskiiDobush2020}:
+	\begin{eqnarray*}
+		\alpha^* = 5.0, & \quad \gamma = 1.65, \\
+		n_0 = 1.521, & \quad R_0/\alpha = 2.9544, \\
+		\chi_0 = 0.07.
+	\end{eqnarray*}
 	
 	The quantity $\tilde D(0)$ entering equations~\eqref{eq:eosMT} and~\eqref{chem_pot} is a function of temperature
 	\begin{equation}
