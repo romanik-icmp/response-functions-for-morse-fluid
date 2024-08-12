@@ -153,7 +153,7 @@
 	The density of the many-particle system is the ratio of the average number of particles $\left\langle N \right\rangle$  to the total volume of the system $V$.
 	In the framework of the grand canonical ensemble the average number of particles $\left\langle N \right\rangle$ is a partial derivative of natural logarithm of the grand partition function $\Xi$ with respect to the product $\beta \mu$. Using the general relation for the equation of state $PV\beta = \ln \Xi $ the density reads
 	\begin{equation}
-	\eta = \frac{<N>}{v N_v} = \frac{1}{v} \frac{\partial}{\partial\beta\mu} Pv\beta = \frac{\bar n}{v},
+	\eta = \frac{\langle N\rangle}{v N_v} = \frac{1}{v} \frac{\partial}{\partial\beta\mu} Pv\beta = \frac{\bar n}{v},
 	\end{equation} 
 	where	
 	\begin{equation}\label{eq:density}
@@ -217,7 +217,40 @@
 	The isothermal compressibility is defined by
 	\begin{equation}
 		\label{def:isotherm_compres}
-		K_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,<N>}
+		K_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,\langle N\rangle}
+	\end{equation}
+	Let us perform some transformations to rewrite the definition for $K_T$ into a form that is more suitable for the equation of state~\eqref{eq:eosMT}.
+	\begin{eqnarray*}
+		K_T & = & - \frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,\langle N\rangle}
+		\\
+		& = & -\rho \left(\frac{\partial \left(\frac{1}{\rho}\right)}{\partial P}\right)_{T,\langle N\rangle}
+		\\
+		& = & \frac{1}{\rho} \left(\frac{\partial \rho}{\partial P} \right)_{T,\langle N\rangle}
+		\\
+		& = & \frac{1}{\rho} \frac{\left(\partial \rho / \partial \mu\right)_{T,\langle N\rangle}}
+		{\left(\partial P / \partial \mu\right)_{T,\langle N\rangle}},
+	\end{eqnarray*}
+	where $\rho = \langle N \rangle / V$ is the particle number density.
+	Applying the Gibbs--Duhem equation at $T = const$, one has
+	\begin{equation*}
+		{\rm d} P = \rho {\rm d} \mu,
+	\end{equation*}
+	or
+	\begin{equation}
+		\label{eq:rho_dpdm}
+		\rho = \left(\frac{\partial P}{\partial \mu}\right)_T.
+	\end{equation}
+	Substituting this into the last expression for $K_T$, one gets
+	\begin{equation}
+		K_T = \frac{1}{\rho^2} \left(\frac{\partial \rho}{\partial \mu}\right)_{T,\langle N\rangle}
+	\end{equation}
+	Finally, from~\eqref{eq:rho_dpdm} it follows that
+	\begin{equation}
+		\left(\frac{\partial \rho}{\partial \mu}\right)_T = \left(\frac{\partial^2 P}{\partial \mu^2}\right)_T
+	\end{equation}
+	and ultimately we arrive at the very useful expression for the isothermal compressibility
+	\begin{equation}
+		K_T = \frac{1}{\rho^2} \left(\frac{\partial^2 P}{\partial \mu^2}\right)_{T,\langle N\rangle}
 	\end{equation}
 	
 	\begin{figure}[h!]
@@ -237,7 +270,7 @@
 	The thermal pressure coefficient is defined by
 	\begin{equation}
 		\label{def:therm_pres_coef}
-		\beta_V = \left( \frac{\partial P}{\partial T} \right)_{V,<N>}
+		\beta_V = \left( \frac{\partial P}{\partial T} \right)_{V,\langle N \rangle}
 	\end{equation}
 	
 	\begin{figure}[h!]
@@ -259,7 +292,7 @@
 	\subsection{Thermal expansion coefficient}
 	The thermal expansion coefficient is defined by
 	\begin{equation}
-		\alpha_P = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P,<N>}
+		\alpha_P = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P,\langle N\rangle}
 	\end{equation}
 	
 	\begin{figure}[h!]
