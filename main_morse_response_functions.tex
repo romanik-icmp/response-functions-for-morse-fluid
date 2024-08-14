@@ -151,7 +151,24 @@
 	........................................................
 	
 	The density of the many-particle system is the ratio of the average number of particles $\left\langle N \right\rangle$  to the total volume of the system $V$.
-	In the framework of the grand canonical ensemble the average number of particles $\left\langle N \right\rangle$ is a partial derivative of natural logarithm of the grand partition function $\Xi$ with respect to the product $\beta \mu$. Using the general relation for the equation of state $PV\beta = \ln \Xi $ the density reads
+	In the framework of the grand canonical ensemble the average number of particles $\left\langle N \right\rangle$ is a partial derivative of natural logarithm of the grand partition function $\Xi$ with respect to the product $\beta \mu$. 
+	\begin{eqnarray*}
+		\langle N \rangle & = & \left(\frac{\partial \ln\Xi}{\partial \beta \mu}\right)_{T,V} 
+		\\
+		& = & \left(\frac{\partial (PV)}{\partial \beta \mu}\right)_{T,V}
+		\\
+		& = & V \left(\frac{\partial P}{\partial \beta \mu}\right)_{T,V}.
+	\end{eqnarray*}
+	From this equation it follows
+	\begin{equation*}
+		\frac{\langle N \rangle}{V} = \frac{\langle N \rangle}{v N_v} = \left(\frac{\partial P}{\partial \beta \mu}\right)_{T,V}
+	\end{equation*}
+	and thus
+	\begin{equation*}
+		\bar{n} \equiv \frac{\langle N \rangle}{V} v = \frac{\langle N \rangle}{N_v} = v \left(\frac{\partial P}{\partial \beta \mu}\right)_{T,V}
+	\end{equation*}
+	
+	Using the general relation for the equation of state $PV\beta = \ln \Xi $ the density reads
 	\begin{equation}
 	\eta = \frac{\langle N\rangle}{v N_v} = \frac{1}{v} \frac{\partial}{\partial\beta\mu} Pv\beta = \frac{\bar n}{v},
 	\end{equation} 
