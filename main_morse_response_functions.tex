@@ -127,7 +127,7 @@
 	{\color{Red} {\bf{NOTE 2: }} In such representation, the critical temperature $k_{\rm B}T_c$ seems to have dimension of $[energy\times volume]$. }   
 	
 	The function $E_\mu(M, T)$ from the equation \eqref{eq:eosMT} is provided by
-	\begin{align}
+	\begin{align}\label{eq:E_mu}
 		& E_\mu (M, T) = - \frac{\ln (2\pi \beta W(0))}{2 N_v}  +  g_0 - \frac{\beta W(0)}{2} \!\! \left( \! \frac{\tilde\mu}{W(0)} \! \right)^{\! 2} \!\!\! - \frac{g_3}{g_4} {M} \! - \frac{g_3^2}{2 g_4^2}  \tilde D(0) - \frac{1}{24} \frac{g_3^4}{g_4^3}. 
 	\end{align}
 	Here the quantity $N_v$ defines the number of cubic cells in volume $V$ for the initial model.
@@ -150,7 +150,7 @@
 	
 	........................................................
 	
-	The density of the many-particle system is the ratio of the average number of particles $\left\langle N \right\rangle$  to the total volume of the system $V$.
+	The density $\eta$ of the many-particle system is the ratio of the average number of particles $\left\langle N \right\rangle$  to the total volume of the system $V$.
 	In the framework of the grand canonical ensemble the average number of particles $\left\langle N \right\rangle$ is a partial derivative of natural logarithm of the grand partition function $\Xi$ with respect to the product $\beta \mu$. Using the general relation for the equation of state $PV\beta = \ln \Xi $ the density reads
 	\begin{equation}
 	\eta = \frac{\langle N\rangle}{v N_v} = \frac{1}{v} \frac{\partial}{\partial\beta\mu} Pv\beta = \frac{\bar n}{v},
@@ -167,40 +167,18 @@
 	\begin{equation}\label{eq:M_nT}
 		\bar M = \frac{\rho_{n}}{\beta W(0)} - (\bar n - n_g),
 	\end{equation}
-	
-	........................................................
-	
-	********************************************************
-	
-	[THE FOLLOWING NEEDS REFINEMENT, OKSANA WILL DO IT SOON] 
-	
 	where
-	\begin{equation} \label{eq:ro_nT}
-		 \rho_{n} = - 2 \left(\frac{-2\left(  g_2 - \frac{1}{2} \frac{g_3^2}{g_4}\right)}{g_4}\right)^{\frac{1}{2}} \cos \left( \frac{\alpha_n}{3} + \frac{\pi}{3} \right), \qquad 	\alpha_n = \arccos \left( \frac{3}{2} \left( - \frac{g_4}{2\left(  g_2 - \frac{1}{2} \frac{g_3^2}{g_4}\right)^3}\right)^{\frac{1}{2}} (n_g - \bar n)\right). 
-	\end{equation}
-	
-	
-	At $T>T_c$ the equation of state of a cell fluid model in terms of density has the following form
-	\begin{equation}\label{eq:eosNT}
-	Pv\beta = E_\mu^{(2)}(n,T) + \bar M \rho_{n} + \frac{\tilde D(0)}{2} \rho_{n}^2 - \frac{a_4}{24} \rho_{n}^4,
-	\end{equation}
-	where
-	\begin{equation}\label{3d30}
-	\bar M = \frac{\rho_{n}}{\beta W(0)} - (\bar n - n_g)
-	\end{equation}
-	is a function of density and temperature. Recall the formula \eqref{2d22} to find
-	\begin{equation}\label{3d31}
-	\frac{\tilde\mu}{W(0)} = \bar M - n_g + n_c \tilde g_2 \gamma_\tau,
-	\end{equation}
-	where $n_g$ is defined in \eqref{3d4}. Therefore,
-	\begin{align}\label{3d32}
-		E_\eta (\bar n,T) & = - \frac{\ln (2\pi \beta W(0))}{2 N_v} + g_0 - \frac{1}{2\tilde g_2 \gamma_\tau} \left( \frac{\tilde\mu}{W(0)}\right)  + n_c \bar M- \nonumber \\
-		& - \frac{1}{2} n_c^2 \tilde D(0) - \frac{1}{24} \frac{g_3^4}{g_4^3}.
+	\begin{align} \label{eq:ro_nT}
+		 & \rho_{n} = - 2 \left(\frac{g_3^2 - 2g_2 g_4}{g_4^2} \right)^{\frac{1}{2}} \cos \left( \frac{\alpha_n}{3} + \frac{\pi}{3} \right), \\
+		 & \alpha_n = \arccos \left( \frac{3}{2} \left( - \frac{g_4^4}{\left( 2 g_2 g_4 - g_3^2\right)^3}\right)^{\frac{1}{2}} (n_g - \bar n)\right). \nonumber
 	\end{align}
 	
-	********************************************************
 	
-	........................................................
+	At $T>T_c$ the equation of state of a cell fluid model in terms of the density and the temperature has the following form
+	\begin{equation}\label{eq:eosNT}
+	Pv\beta = E_\eta (\bar n,T) + \bar M \rho_{n} + \frac{\tilde D(0)}{2} \rho_{n}^2 - \frac{a_4}{24} \rho_{n}^4,
+	\end{equation}
+ The function $E_\nu (\bar n, T)$ in \eqref{eq:ro_nT} is the function $E_\mu (M,T)$ \eqref{eq:E_mu} rewritten in terms of density and temperature taking into account the expression \eqref{eq:M_nT}.
 	
 	Figure~1 shows the isotherms for the pressure $P$ following from the equation of state ~\eqref{eq:eosMT} in terms of (chemical potential, temperature)  and \eqref{eq:eosNT} in terms of (density, temperature).
 	\begin{figure}[h!]
