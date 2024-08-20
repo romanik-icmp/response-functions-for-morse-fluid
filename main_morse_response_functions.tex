@@ -155,17 +155,17 @@
 	\begin{eqnarray*}
 		\langle N \rangle & = & \left(\frac{\partial \ln\Xi}{\partial \beta \mu}\right)_{T,V} 
 		\\
-		& = & \left(\frac{\partial (PV)}{\partial \beta \mu}\right)_{T,V}
+		& = & \left(\frac{\partial (PV)}{\partial \mu}\right)_{T,V}
 		\\
-		& = & V \left(\frac{\partial P}{\partial \beta \mu}\right)_{T,V}.
+		& = & V \left(\frac{\partial P}{\partial \mu}\right)_{T,V}.
 	\end{eqnarray*}
 	From this equation it follows
 	\begin{equation*}
-		\frac{\langle N \rangle}{V} = \frac{\langle N \rangle}{v N_v} = \left(\frac{\partial P}{\partial \beta \mu}\right)_{T,V}
+		\frac{\langle N \rangle}{V} = \frac{\langle N \rangle}{v N_v} = \left(\frac{\partial P}{\partial \mu}\right)_{T,V}
 	\end{equation*}
 	and thus
 	\begin{equation*}
-		\bar{n} \equiv \frac{\langle N \rangle}{V} v = \frac{\langle N \rangle}{N_v} = v \left(\frac{\partial P}{\partial \beta \mu}\right)_{T,V}
+		\bar{n} \equiv \frac{\langle N \rangle}{V} v = \frac{\langle N \rangle}{N_v} = v \left(\frac{\partial P}{\partial \mu}\right)_{T,V}
 	\end{equation*}
 	
 	Using the general relation for the equation of state $PV\beta = \ln \Xi $ the density reads
@@ -226,7 +226,11 @@
 		{\left(\partial P / \partial \mu\right)_{T,\langle N\rangle}},
 	\end{eqnarray*}
 	where $\rho = \langle N \rangle / V$ is the particle number density.
-	Applying the Gibbs--Duhem equation at $T = const$, one has
+	Applying the Gibbs--Duhem equation
+	\begin{equation}
+		N{\rm d}\mu = -S{\rm d}T + V{\rm d}P,
+	\end{equation}
+	at $T = const$ one has 
 	\begin{equation*}
 		{\rm d} P = \rho {\rm d} \mu,
 	\end{equation*}
