@@ -58,6 +58,7 @@
 	Our modification contains an additional repulsive term, similar to~\cite{MartinezValenciaEtAl2013}, as well as introduces parameter $\gamma$, which can vary as opposed to being strictly equal to 2 in the Morse potential. Including the repulsive term enables us to single out a reference system and apply the method of collective variables to calculating the grand partition function~[REFERENCE NEEDED].
 	
 	\section{The equation of state}
+	\subsection{Pressure as a function of temperature and chemical potential}
 	The equation of state obtained in~\cite[see Eq.(42)]{KozlovskiiDobush2020} reads
 	\begin{equation}
 		\label{eq:eosMT}
@@ -84,7 +85,7 @@
 	\end{align*}
 	and $\Phi^{(r)}(0)$ is the Fourier transform of the repulsive part of the potential at $\abs{\vb k}=0$
 	\begin{equation*}
-		\Phi^{(r)}(0) = \varepsilon C_H 8\pi {\rm e}^{\gamma R_0/\alpha} \left(\frac{\alpha}{\gamma}\right)^3.
+		\Phi^{(r)}(0) = \varepsilon C_H 8\pi {\rm e}^{\gamma R_0/\alpha} \left(\frac{\alpha}{\gamma R_0}\right)^3.
 	\end{equation*}
 	
 	The parameter $\chi_0$ is used in~\cite{KozlovskiiDobush2020} to single out a contribution in the Fourier transform of the potential that is treated as a reference system defined in the reciprocal space, and is selected as $\chi_0 = 0.07$~\cite[see Eq.(24)]{KozlovskiiDobush2020}.
@@ -103,18 +104,19 @@
 	\begin{equation}
 		p = \frac{\beta_c}{2} \Phi^{(r)}(0) [\chi_0 + A_\gamma].
 	\end{equation} 
-	{\color{Red} {\bf{NOTE 1: }} Both quantities $p$ and $\alpha^*$ have the dimensions of volume. }
+	{\color{Red} {\bf{NOTE 1: }} Quantities $\alpha^*$ has the dimension of volume.}
 	
 	The quantity $\beta_c$ denotes the critical value of the inverse temperature. In~\cite[see Eq.(31)]{KozlovskiiDobush2020} it was found that
 	\begin{equation*}
 		\varepsilon\beta_c = 0.200, \quad \frac{k_{\rm B} T_c}{\varepsilon} = 4.995.
 	\end{equation*}
 	Since $p$ is independent of temperature, the coefficients $g_n$ are also independent of temperature. The numerical values for other coefficients used in this paper are the same as those in~\cite[see Eqs.(5), (23), and (24)]{KozlovskiiDobush2020}:
-	\begin{eqnarray*}
+	\begin{eqnarray}
+		\label{params}
 		\chi_0 = 0.07, & \quad \gamma = 1.65, \\
 		n_0 = 1.521, & \quad R_0/\alpha = 2.9544, \\
 		\alpha^* = 5.0 & \quad p = 1.0.
-	\end{eqnarray*}
+	\end{eqnarray}
 	
 	The quantity $\tilde D(0)$ entering equations~\eqref{eq:eosMT} and~\eqref{chem_pot} is a function of temperature
 	\begin{equation}
@@ -123,8 +125,7 @@
 	The condition $\tilde{D}(0) = 0$ defines the critical temperature~\cite[see Eq.(31)]{KozlovskiiDobush2020}
 	\begin{equation}
 		k_{\rm B}T_c = \left(g_2 - \frac{1}{2} \frac{g_3^2}{g_4} \right) (B - 1 + \chi_0) \Phi^{(r)}(0).
-	\end{equation} 
-	{\color{Red} {\bf{NOTE 2: }} In such representation, the critical temperature $k_{\rm B}T_c$ seems to have dimension of $[energy\times volume]$. }   
+	\end{equation}  
 	
 	The function $E_\mu(M, T)$ from the equation \eqref{eq:eosMT} is provided by
 	\begin{align}\label{eq:E_mu}
@@ -148,9 +149,8 @@
 	Thus, $\bar{\rho}_0$ is a function of the temperature and the chemical potential.
 	
 	
-	........................................................
-	
-	The density of the many-particle system is the ratio of the average number of particles $\left\langle N \right\rangle$  to the total volume of the system $V$.
+	\subsection{Pressure as a function of temperature and density}
+	In this work, by density we mean the particle number density $\rho = \langle N \rangle / V$.
 	In the framework of the grand canonical ensemble the average number of particles $\left\langle N \right\rangle$ is a partial derivative of natural logarithm of the grand partition function $\Xi$ with respect to the product $\beta \mu$. 
 	\begin{eqnarray*}
 		\langle N \rangle & = & \left(\frac{\partial \ln\Xi}{\partial \beta \mu}\right)_{T,V} 
@@ -164,22 +164,25 @@
 		\frac{\langle N \rangle}{V} = \frac{\langle N \rangle}{v N_v} = \left(\frac{\partial P}{\partial \mu}\right)_{T,V}
 	\end{equation*}
 	and thus
-	\begin{equation*}
-		\bar{n} \equiv \frac{\langle N \rangle}{V} v = \frac{\langle N \rangle}{N_v} = v \left(\frac{\partial P}{\partial \mu}\right)_{T,V}
-	\end{equation*}
-	
-	Using the general relation for the equation of state $PV\beta = \ln \Xi $ the density reads
 	\begin{equation}
-	\eta = \frac{\langle N\rangle}{v N_v} = \frac{1}{v} \frac{\partial}{\partial\beta\mu} Pv\beta = \frac{\bar n}{v},
-	\end{equation} 
-	where	
+		\bar{n} \equiv \frac{\langle N \rangle}{V} v = \frac{\langle N \rangle}{N_v} = v \left(\frac{\partial P}{\partial \mu}\right)_{T,V} 
+		= \left(\frac{\partial (Pv\beta)}{\partial (\beta \mu)}\right)_{T,V}.
+	\end{equation}
+	The quantity $\bar{n}$, on the one hand, has the meaning of the reduced particle number density. On the other hand, it is the average number of particles per cell.
+	Taking explicit derivatives, we arrive at
 	\begin{equation}\label{eq:density}
-	\bar n = n_g - \bar{M} + \frac{ \bar \rho_0}{\beta W(0)}.
+	\bar n = n_g - M + \frac{ \bar \rho_0}{\beta W(0)}.
 	\end{equation}
 	The quantity $n_g$ in the equation \eqref{eq:density} is the critical density
-	\begin{equation}\label{eq:crit_dens}
-	n_g = g_1 - \frac{g_3}{g_4}\left(  g_2 - \frac{1}{2} \frac{g_3^2}{g_4}\right) - \frac{1}{6} \frac{g_3^3}{g_4^2}.
-	\end{equation}
+	\begin{eqnarray}\label{eq:crit_dens}
+	n_g & = & g_1 - \frac{g_3}{g_4}\left(  g_2 - \frac{1}{2} \frac{g_3^2}{g_4}\right) - \frac{1}{6} \frac{g_3^3}{g_4^2} 
+	\nonumber\\
+	& = & g_1 - \frac{g_2 g_3}{g_4} + \frac{g_3^3}{3g_4^2}
+	\end{eqnarray}
+	Its numerical value for parameters~\eqref{params} is
+	\begin{equation*}
+		n_g = 0.978.
+	\end{equation*}
 	Combination of the equations \eqref{eq:density} and \eqref{eq:ro_M} reveals the explicit expression for the effective chemical potential $M$ as a function of the density and the temperature
 	\begin{equation}\label{eq:M_nT}
 		\bar M = \frac{\rho_{n}}{\beta W(0)} - (\bar n - n_g),
