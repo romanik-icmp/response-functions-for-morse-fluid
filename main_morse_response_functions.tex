@@ -113,8 +113,8 @@
 	Since $p$ is independent of temperature, the coefficients $g_n$ are also independent of temperature. The numerical values for other coefficients used in this paper are the same as those in~\cite[see Eqs.(5), (23), and (24)]{KozlovskiiDobush2020}:
 	\begin{eqnarray}
 		\label{params}
-		\chi_0 = 0.07, & \quad \gamma = 1.65, \\
-		n_0 = 1.521, & \quad R_0/\alpha = 2.9544, \\
+		\chi_0 = 0.07, & \quad \gamma = 1.65, \nonumber\\
+		n_0 = 1.521, & \quad R_0/\alpha = 2.9544, \nonumber\\
 		\alpha^* = 5.0 & \quad p = 1.0.
 	\end{eqnarray}
 	
@@ -128,11 +128,17 @@
 	\end{equation}  
 	
 	The function $E_\mu(M, T)$ from the equation \eqref{eq:eosMT} is provided by
-	\begin{align}\label{eq:E_mu}
-		& E_\mu (M, T) = - \frac{\ln (2\pi \beta W(0))}{2 N_v}  +  g_0 - \frac{\beta W(0)}{2} \!\! \left( \! \frac{\tilde\mu}{W(0)} \! \right)^{\! 2} \!\!\! - \frac{g_3}{g_4} {M} \! - \frac{g_3^2}{2 g_4^2}  \tilde D(0) - \frac{1}{24} \frac{g_3^4}{g_4^3}. 
-	\end{align}
+	\begin{eqnarray}\label{eq:E_mu}
+		E_\mu (M, T) & = & - \frac{\ln (2\pi \beta W(0))}{2 N_v}  +  g_0 - \frac{\beta W(0)}{2} 
+		\left(\frac{\tilde\mu}{W(0)} \right)^{2} 
+		\nonumber\\
+		&& - \frac{g_3}{g_4} {M} \! - \frac{g_3^2}{2 g_4^2}  \tilde D(0) - \frac{1}{24} \frac{g_3^4}{g_4^3}. 
+	\end{eqnarray}
 	Here the quantity $N_v$ defines the number of cubic cells in volume $V$ for the initial model.
-	In the thermodynamic limit, $N_v \to \infty$.
+	In the thermodynamic limit, $N_v \to \infty$, and thus the first term can be neglected. The term $\tilde{\mu}/W(0)$ can be expressed in terms of $M$ using~\eqref{chem_pot}. The temperature and the inverse temperature can always be expressed in terms of the reduced temperature and a corresponding critical value:
+	\begin{equation*}
+		T = T_c(1+\tau), \quad \beta = \beta_c (1 + \tau)^{-1}
+	\end{equation*} 
 	
 	The quantity $\bar{\rho}_0$ is a solution to the following cubic equation
 	\begin{equation}\label{eq:ro_M}
@@ -147,6 +153,18 @@
 	Q_t = \left(  \frac{2\tilde D(0)}{g_4}\right)^3 + \left( -\frac{3 M}{g_4}\right)^2, \qquad g_4<0.
 	\end{equation}
 	Thus, $\bar{\rho}_0$ is a function of the temperature and the chemical potential.
+	
+	Let us introduce the reduced pressure
+	\begin{equation}
+		\label{def:reduced_pres}
+		P^* \equiv \frac{P v}{\varepsilon}.
+	\end{equation}
+	Considering the equation of state~\eqref{eq:eosMT}, $P^*$ can be written as
+	\begin{equation}
+		\label{eq:reduced_pres}
+		P^* = \frac{1 + \tau}{\varepsilon \beta_c} Pv\beta.
+	\end{equation}
+	This equation can be easily represented graphically. Figure~\ref{fig1} illustrates the relationship between the reduced pressure $P^*$ and the effective chemical potential $M$ for various values of the reduced temperature $\tau$, at and above the critical temperature. At the critical point $M=0, \tau=0$, $P^*_c = 1.606$. 
 	
 	
 	\subsection{Pressure as a function of temperature and density}
@@ -168,7 +186,7 @@
 		\bar{n} \equiv \frac{\langle N \rangle}{V} v = \frac{\langle N \rangle}{N_v} = v \left(\frac{\partial P}{\partial \mu}\right)_{T,V} 
 		= \left(\frac{\partial (Pv\beta)}{\partial (\beta \mu)}\right)_{T,V}.
 	\end{equation}
-	The quantity $\bar{n}$, on the one hand, has the meaning of the reduced particle number density. On the other hand, it is the average number of particles per cell.
+	The quantity $\bar{n}$, on the one hand, has the meaning of the reduced particle number density. In the context of the cell model, on the other hand, it is the average number of particles per cell.
 	Taking explicit derivatives, we arrive at
 	\begin{equation}\label{eq:density}
 	\bar n = n_g - M + \frac{ \bar \rho_0}{\beta W(0)}.
@@ -183,7 +201,9 @@
 	\begin{equation*}
 		n_g = 0.978.
 	\end{equation*}
-	Combination of the equations \eqref{eq:density} and \eqref{eq:ro_M} reveals the explicit expression for the effective chemical potential $M$ as a function of the density and the temperature
+	Equations~\eqref{eq:density} and~\eqref{eq:eosMT} jointly define a parametric relationship between pressure and density, with $M$ serving as the parameter. Figure~\ref{fig1} shows the dependency of the reduced pressure $P^*$ on the density $\bar{n}$ for various values of the reduced temperature $\tau$, at and above the critical temperature.
+	
+	This dependency can also be expressed explicitly. To achieve this, we combine the equations~\eqref{eq:density} and~\eqref{eq:ro_M} to express the effective chemical potential $M$ as a function of density and temperature:
 	\begin{equation}\label{eq:M_nT}
 		\bar M = \frac{\rho_{n}}{\beta W(0)} - (\bar n - n_g),
 	\end{equation}
@@ -205,7 +225,7 @@
 		%\centering 
 		\includegraphics[width=0.446\textwidth]{f1a1.pdf} 
 		\includegraphics[width=0.45\textwidth]{f1b1.pdf} 
-		\vskip-3mm\caption{Plots of isotherms of the pressure $P$ as a function of the density $\bar n$ (on the lefthand side) and a function of the effective chemical potential $M$ (on the righthand side) at $T \geq T_c$ represented by black lines. Thick grey lines on both figures correspond to isotherms of pressure at $T < T_c$ based on the results taken from~\cite{KozlovskiiDobush2020}. 
+		\vskip-3mm\caption{Isotherms of the reduced pressure $P^*$ as a function of the density $\bar n$ (on the left-hand side) and a function of the effective chemical potential $M$ (on the right-hand side) at $T \geq T_c$ represented by black lines. Thick grey lines on both figures correspond to isotherms of pressure at $T < T_c$ based on the results taken from~\cite{KozlovskiiDobush2020}. 
 		}\label{fig1}
 	\end{figure}
 	
