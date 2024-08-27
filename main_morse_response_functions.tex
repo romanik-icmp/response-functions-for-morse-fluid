@@ -334,7 +334,7 @@
 	
 	We introduce the reduced thermal pressure coefficient by
 	\begin{equation}
-		\beta^*_V = \frac{v\beta_V}{k_{\rm B}}.
+		\beta^*_V = \frac{v}{k_{\rm B}}\beta_V.
 	\end{equation}
 	
 	\begin{figure}[h!]
@@ -360,17 +360,55 @@
 	\begin{equation}
 		\alpha_P = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P,\langle N\rangle}
 	\end{equation}
+	We rewrite $\alpha_P$ into a form suitable for the equation of state~\eqref{eq:eosMT}
+	\begin{eqnarray*}
+		\alpha_P & = & \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P,\langle N\rangle}
+		\\
+		& = & -\frac{1}{\rho} \left(\frac{\partial \rho}{\partial T}\right)_{P, N}
+		\\
+		& = & -\frac{1}{\rho} \left(\frac{\partial \rho}{\partial T}\right)_{\mu} 
+		 - \frac{1}{\rho} \left(\frac{\partial \rho}{\partial \mu}\right)_{T}
+		 \left(\frac{\partial \mu}{\partial T}\right)_{P, N}.
+	\end{eqnarray*}
+	Applying the chain rule
+	\begin{equation*}
+		\left(\frac{\partial \mu}{\partial T}\right)_{P, N}
+		\left(\frac{\partial T}{\partial P}\right)_{\mu, N}
+		\left(\frac{\partial P}{\partial \mu}\right)_{T, N}
+		= -1
+	\end{equation*}
+	we get
+	\begin{eqnarray*}
+		\left(\frac{\partial \mu}{\partial T}\right)_{P, N} & = & 
+		- \left(\frac{\partial P}{\partial T}\right)_{\mu}
+		\left(\frac{\partial P}{\partial \mu}\right)^{-1}_{T}.
+	\end{eqnarray*}
+	Substituting the result into the expression for $\alpha_P$, we arrive at the final formula for the thermal expansion coefficient
+	\begin{equation}
+		\alpha_P = -\frac{1}{\rho}\left(\frac{\partial \rho}{\partial T}\right)_{\mu}
+		+ \frac{1}{\rho} \left(\frac{\partial \rho}{\partial \mu}\right)_{T}
+		\left(\frac{\partial P}{\partial T}\right)_{\mu}
+		\left(\frac{\partial P}{\partial \mu}\right)^{-1}_{T}
+	\end{equation}
+	which is readily calculated based on Eqs.~\eqref{eq:eosMT} and~\eqref{eq:density}.\\
+	(NB. Compare this equation with Eqs.(57)-(58) from~\cite{StrokerMeier2021})
+	
+	We introduce the reduced thermal expansion coefficient by
+	\begin{equation}
+		\alpha^*_P = \frac{\varepsilon}{k_{\rm B}} \alpha_P.
+	\end{equation}
+	Figure~\ref{fig4a} shows the dependency of the reduced thermal expansion coefficient $\alpha^*_P$ on the density $\bar{n}$ for various values of temperature above the critical one. The dependency of $\alpha^*_P$ on the effective chemical potential $M$ is displayed in Figure~\ref{fig4b}.
 	
 	\begin{figure}[h!]
 		\centering \includegraphics[width=0.5\textwidth]{f4a.pdf}
-		\vskip-3mm\caption{The thermal expansion coefficient $\alpha_P$ as a function of the density $\bar n$ at different values of relative temperature $\tau > 0$ ($T > T_c$). 
+		\vskip-3mm\caption{The reduced thermal expansion coefficient $\alpha^*_P$ as a function of the density $\bar n$ at different values of relative temperature $\tau > 0$ ($T > T_c$). 
 		}\label{fig4a}
 	\end{figure}
 	
-		\begin{figure}[h!]
+	\begin{figure}[h!]
 		\centering \includegraphics[width=0.45\textwidth]{f4b.pdf}
 		\includegraphics[width=0.475\textwidth]{f4c.pdf}
-		\vskip-3mm\caption{The thermal expansion coefficient $\alpha_P$ as a function of the effective chemical potential $M$ for different temperatures $\tau = (T - T_c)/T_c$ at $T > T_c$. The two figures differ in the scale of $M$. The left-hand-side figure covers a wider range of $M$, while the right-hand-side one focuses on a range of $M$ around its critical value $0$.
+		\vskip-3mm\caption{The reduced thermal expansion coefficient $\alpha^*_P$ as a function of the effective chemical potential $M$ for different temperatures $\tau = (T - T_c)/T_c$ at $T > T_c$. The two figures differ in the scale of $M$. The left-hand-side figure covers a wider range of $M$, while the right-hand-side one focuses on a range of $M$ around its critical value $0$.
 		}\label{fig4b}
 	\end{figure}
 	
