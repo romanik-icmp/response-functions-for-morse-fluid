@@ -169,7 +169,7 @@
 	
 	\subsection{Pressure as a function of temperature and density}
 	In this work, by density we mean the particle number density $\rho = \langle N \rangle / V$.
-	In the framework of the grand canonical ensemble the average number of particles $\left\langle N \right\rangle$ is a partial derivative of natural logarithm of the grand partition function $\Xi$ with respect to the product $\beta \mu$. 
+	In the framework of the grand canonical ensemble the average number of particles $\left\langle N \right\rangle$ is a partial derivative of natural logarithm of the grand partition function $\Xi$ with respect to $\beta \mu$ 
 	\begin{eqnarray*}
 		\langle N \rangle & = & \left(\frac{\partial \ln\Xi}{\partial \beta \mu}\right)_{T,V} 
 		\\
@@ -235,9 +235,9 @@
 	The isothermal compressibility is defined by
 	\begin{equation}
 		\label{def:isotherm_compres}
-		K_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,\langle N\rangle}
+		K_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,\langle N\rangle}.
 	\end{equation}
-	Let us perform some transformations to rewrite the definition for $K_T$ into a form that is more suitable for the equation of state~\eqref{eq:eosMT}.
+	Let us perform some transformations to rewrite $K_T$ into a form that is more suitable for the equation of state~\eqref{eq:eosMT}
 	\begin{eqnarray*}
 		K_T & = & - \frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,\langle N\rangle}
 		\\
@@ -245,10 +245,10 @@
 		\\
 		& = & \frac{1}{\rho} \left(\frac{\partial \rho}{\partial P} \right)_{T,\langle N\rangle}
 		\\
-		& = & \frac{1}{\rho} \frac{\left(\partial \rho / \partial \mu\right)_{T,\langle N\rangle}}
-		{\left(\partial P / \partial \mu\right)_{T,\langle N\rangle}},
+		& = & \frac{1}{\rho} \frac{\left(\partial \rho / \partial \mu\right)_{T}}
+		{\left(\partial P / \partial \mu\right)_{T}},
 	\end{eqnarray*}
-	where $\rho = \langle N \rangle / V$ is the particle number density.
+	where $\rho = \langle N \rangle / V$ is the particle number density. We have omitted the condition of constant $\langle N \rangle$ in the last line of the above equation since we have explicit dependencies on temperature and chemical potential for both pressure $P = P(T, \mu)$, see Eq.~\eqref{eq:eosMT}, and density $\rho = \rho(T, \mu)$, see Eq.~\eqref{eq:density}.
 	Applying the Gibbs--Duhem equation
 	\begin{equation}
 		N{\rm d}\mu = -S{\rm d}T + V{\rm d}P,
@@ -264,7 +264,7 @@
 	\end{equation}
 	Substituting this into the last expression for $K_T$, one gets
 	\begin{equation}
-		K_T = \frac{1}{\rho^2} \left(\frac{\partial \rho}{\partial \mu}\right)_{T,\langle N\rangle}
+		K_T = \frac{1}{\rho^2} \left(\frac{\partial \rho}{\partial \mu}\right)_{T}
 	\end{equation}
 	Finally, from~\eqref{eq:rho_dpdm} it follows that
 	\begin{equation}
@@ -272,19 +272,25 @@
 	\end{equation}
 	and ultimately we arrive at the very useful expression for the isothermal compressibility
 	\begin{equation}
-		K_T = \frac{1}{\rho^2} \left(\frac{\partial^2 P}{\partial \mu^2}\right)_{T,\langle N\rangle}
+		K_T = \frac{1}{\rho^2} \left(\frac{\partial^2 P}{\partial \mu^2}\right)_{T}
 	\end{equation}
+	
+	Let us introduce the reduced isothermal compressibility
+	\begin{equation}
+		K^*_T \equiv \frac{\varepsilon K_T}{v}.
+	\end{equation}
+	The quantity $K^*_T$ is dimensionless and is of order unity, except at the critical point itself, where it is divergent. Figure~\ref{fig2a} illustrates the dependency of the compressibility $K^*_T$ on the density $\bar{n}$ for various values of temperature above the critical one.
 	
 	\begin{figure}[h!]
 		\centering \includegraphics[width=0.5\textwidth]{f2a.pdf}
-		\vskip-3mm\caption{The isothermal compressibility $K_T$ as a function of the density $\bar n$ at different values of reduced temperature $\tau > 0$ ($T > T_c$). 
+		\vskip-3mm\caption{The reduced isothermal compressibility $K^*_T$ as a function of the density $\bar n$ at different values of reduced temperature $\tau > 0$ ($T > T_c$). 
 		}\label{fig2a}
 	\end{figure}
 	
 	\begin{figure}[h!]
 		\centering \includegraphics[width=0.45\textwidth]{f2b.pdf}
 		\includegraphics[width=0.475\textwidth]{f2c.pdf}
-		\vskip-3mm\caption{The isothermal compressibility $K_T$ as a function of the effective chemical potential $M$ for different temperatures $\tau = (T - T_c)/T_c$ at $T > T_c$. The two figures differ in the scale of $M$. The left-hand-side figure covers a wider range of $M$, while the right-hand-side one focuses on a range of $M$ around its critical value $0$.
+		\vskip-3mm\caption{The reduced isothermal compressibility $K^*_T$ as a function of the effective chemical potential $M$ for different temperatures $\tau = (T - T_c)/T_c$ at $T > T_c$. The two figures differ in the scale of $M$. The left-hand-side figure covers a wider range of $M$, while the right-hand-side one focuses on a range of $M$ around its critical value $0$.
 		}\label{fig2b}
 	\end{figure}
 	
