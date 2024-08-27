@@ -298,24 +298,61 @@
 	The thermal pressure coefficient is defined by
 	\begin{equation}
 		\label{def:therm_pres_coef}
-		\beta_V = \left( \frac{\partial P}{\partial T} \right)_{V,\langle N \rangle}
+		\beta_V = \left( \frac{\partial P}{\partial T} \right)_{V,\langle N \rangle}.
+	\end{equation}
+	We rewrite $\beta_V$ into a form that is suitable for the equation of state~\eqref{eq:eosMT}
+	\begin{eqnarray}
+		\beta_V & = & \left(\frac{\partial P}{\partial T}\right)_{V, N}
+		\nonumber\\
+		& = & \left(\frac{\partial P}{\partial T}\right)_{\mu} + \left(\frac{\partial P}{\partial \mu}\right)_T \left(\frac{\partial \mu}{\partial T}\right)_{V, N}.
+	\end{eqnarray}
+	Applying the chain rule
+	\begin{equation*}
+		\left(\frac{\partial \mu}{\partial T}\right)_{V, N} 
+		\left(\frac{\partial T}{\partial V}\right)_{\mu, N}
+		\left(\frac{\partial V}{\partial \mu}\right)_{T, N}
+		= -1
+	\end{equation*}
+	we obtain
+	\begin{eqnarray*}
+		\left(\frac{\partial \mu}{\partial T}\right)_{V, N} 
+		& = & 
+		- \left(\frac{\partial V}{\partial T}\right)_{\mu, N} 
+		\left(\frac{\partial V}{\partial \mu}\right)^{-1}_{T, N} \\
+		& = & - \left(\frac{\partial \bar{n}}{\partial T}\right)_{\mu}
+		\left(\frac{\partial \bar{n}}{\partial \mu}\right)^{-1}_{T}.		
+	\end{eqnarray*}
+	Substituting this result into the formula for $\beta_V$, we arrive at the final expression for the thermal pressure coefficient
+	\begin{equation}
+		\beta_V = \left(\frac{\partial P}{\partial T}\right)_{\mu} 
+		- \left(\frac{\partial P}{\partial \mu}\right)_T 
+		\left(\frac{\partial \bar{n}}{\partial T}\right)_{\mu}
+		\left(\frac{\partial \bar{n}}{\partial \mu}\right)^{-1}_{T}
+	\end{equation}
+	which is easily calculated based on Eqs.~\eqref{eq:eosMT} and~\eqref{eq:density}.
+	
+	We introduce the reduced thermal pressure coefficient by
+	\begin{equation}
+		\beta^*_V = \frac{v\beta_V}{k_{\rm B}}.
 	\end{equation}
 	
 	\begin{figure}[h!]
 		\centering \includegraphics[width=0.5\textwidth]{f3a.pdf}
-		\vskip-3mm\caption{The thermal pressure coefficient $\beta_V$ as a function of the density $\bar n$ at different values of relative temperature $\tau > 0$ ($T > T_c$). 
+		\vskip-3mm\caption{The reduced thermal pressure coefficient $\beta^*_V$ as a function of the density $\bar n$ at different values of relative temperature $\tau > 0$ ($T > T_c$). 
 		}\label{fig3a}
 	\end{figure}
 	\begin{figure}[h!]
 		\centering \includegraphics[width=0.5\textwidth]{f3b.pdf}
-		\vskip-3mm\caption{The thermal pressure coefficient $\beta_V$ as a function of the effective chemical potential $M$ at different values of relative temperature $\tau > 0$ ($T > T_c$). 
+		\vskip-3mm\caption{The reduced thermal pressure coefficient $\beta^*_V$ as a function of the effective chemical potential $M$ at different values of relative temperature $\tau > 0$ ($T > T_c$). 
 		}\label{fig3b}
 	\end{figure}
 	\begin{figure}[h!]
 		\centering \includegraphics[width=0.5\textwidth]{f3c.pdf}
-		\vskip-3mm\caption{The thermal pressure coefficient $\beta_V$ as a function of the relative temperature $\tau$ at different values of the density $\eta$. 
+		\vskip-3mm\caption{The reduced thermal pressure coefficient $\beta^*_V$ as a function of the relative temperature $\tau$ at different values of the density $\eta$. 
 		}\label{fig3c}
 	\end{figure}
+	
+	Figure~\ref{fig3a} shows the dependency of the pressure coefficient $\beta^*_V$ on the density $\bar{n}$ for various values of temperature above the critical one. The dependency of $\beta^*_V$ on the effective chemical potential $M$ is displayed in Fig~\ref{fig3b}.
 	
 	\subsection{Thermal expansion coefficient}
 	The thermal expansion coefficient is defined by
