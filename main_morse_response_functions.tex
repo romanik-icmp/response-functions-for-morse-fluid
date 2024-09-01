@@ -400,18 +400,19 @@
 	\subsection{Thermal expansion coefficient}
 	The thermal expansion coefficient is defined by
 	\begin{equation}
-		\alpha_P = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P,\langle N\rangle}
+		\alpha_P = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P,\langle N\rangle}.
 	\end{equation}
-	We rewrite $\alpha_P$ into a form suitable for the equation of state~\eqref{eq:eosMT}
-	\begin{eqnarray*}
-		\alpha_P & = & \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P,\langle N\rangle}
-		\\
+	We rewrite $\alpha_P$ into a form suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}
+	\begin{eqnarray}
+		\alpha_P & = & \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P, N}
+		\nonumber\\
+		\label{eq:alpha_vs_rho}
 		& = & -\frac{1}{\rho} \left(\frac{\partial \rho}{\partial T}\right)_{P, N}
 		\\
 		& = & -\frac{1}{\rho} \left(\frac{\partial \rho}{\partial T}\right)_{\mu} 
 		 - \frac{1}{\rho} \left(\frac{\partial \rho}{\partial \mu}\right)_{T}
 		 \left(\frac{\partial \mu}{\partial T}\right)_{P, N}.
-	\end{eqnarray*}
+	\end{eqnarray}
 	Applying the cyclic relation
 	\begin{equation*}
 		\left(\frac{\partial \mu}{\partial T}\right)_{P, N}
@@ -439,6 +440,30 @@
 	\begin{equation}
 		\alpha^*_P = \frac{\varepsilon}{k_{\rm B}} \alpha_P.
 	\end{equation}
+	It is expressed in terms of the reduced quantities $P^*$ and $\bar{n}$ as follows
+	\begin{equation}
+		\alpha^*_P = \varepsilon \beta_c 
+		\left( 
+		-\frac{1}{\bar{n}}\left(\frac{\partial \bar{n}}{\partial \tau}\right)_{\mu}
+		+ \frac{1}{\bar{n}} \left(\frac{\partial \bar{n}}{\partial \mu}\right)_{T}
+		\left(\frac{\partial P^*}{\partial \tau}\right)_{\mu}
+		\left(\frac{\partial P^*}{\partial \mu}\right)^{-1}_{T} 
+		\right).
+	\end{equation}
+	
+	If it is preferable to use the equation of state in the form $P=P(T, \bar{n})$, see~\eqref{eq:eosNT} and~\eqref{eq:eosPTn_reduced}, then we need to rewrite the definition for $\alpha_P$ accordingly. We start with~\eqref{eq:alpha_vs_rho} and apply the cyclic relation
+	\begin{equation}
+		\left(\frac{\partial \rho}{\partial T}\right)_P = - \left(\frac{\partial P}{\partial T}\right)_{\rho} \left(\frac{\partial P}{\partial \rho}\right)^{-1}_T
+	\end{equation}
+	to get for $\alpha_P$
+	\begin{equation}
+		\alpha_P = \frac{1}{\rho} \left(\frac{\partial P}{\partial T}\right)_{\rho} \left(\frac{\partial P}{\partial \rho}\right)^{-1}_T.
+	\end{equation}
+	or for $\alpha^*_P$
+	\begin{equation}
+		\alpha^*_P = \frac{\varepsilon\beta_c}{\bar{n}} \left(\frac{\partial P^*}{\partial \tau}\right)_{\rho} \left(\frac{\partial P^*}{\partial \bar{n}}\right)^{-1}_T.
+	\end{equation}
+	
 	Figure~\ref{fig4a} shows the dependency of the reduced thermal expansion coefficient $\alpha^*_P$ on the density $\bar{n}$ for various values of temperature above the critical one. The dependency of $\alpha^*_P$ on the effective chemical potential $M$ is displayed in Figure~\ref{fig4b}.
 	
 	\begin{figure}[h!]
