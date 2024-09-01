@@ -323,7 +323,7 @@
 		\label{def:therm_pres_coef}
 		\beta_V = \left( \frac{\partial P}{\partial T} \right)_{V,\langle N \rangle}.
 	\end{equation}
-	We rewrite $\beta_V$ into a form that is suitable for the equation of state~\eqref{eq:eosMT}
+	We rewrite $\beta_V$ into a form that is suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}
 	\begin{eqnarray}
 		\beta_V & = & \left(\frac{\partial P}{\partial T}\right)_{V, N}
 		\nonumber\\
@@ -359,6 +359,25 @@
 	\begin{equation}
 		\beta^*_V = \frac{v}{k_{\rm B}}\beta_V.
 	\end{equation}
+	It is expressed in terms of the reduced quantities $P^*$ and $\bar{n}$ as follows
+	\begin{equation}
+		\beta^*_V = \varepsilon\beta_c 
+		\left[ \left(\frac{\partial P^*}{\partial \tau}\right)_{\mu} 
+		- \left(\frac{\partial P^*}{\partial \mu}\right)_T 
+		\left(\frac{\partial \bar{n}}{\partial \tau}\right)_{\mu}
+		\left(\frac{\partial \bar{n}}{\partial \mu}\right)^{-1}_{T} 
+		\right].
+	\end{equation}
+	
+	If it is preferable to use the equation of state in the form $P=P(T, \bar{n})$, see~\eqref{eq:eosNT} and~\eqref{eq:eosPTn_reduced}, then the most suitable expressions for the thermal pressure coefficient follow immediately from the definition~\eqref{def:therm_pres_coef}
+	\begin{equation}
+		\beta_V = \left(\frac{\partial P}{\partial T}\right)_\rho
+	\end{equation}
+	and
+	\begin{equation}
+		\beta^*_V = \varepsilon\beta_c \left(\frac{\partial P^*}{\partial \tau}\right)_{\rho}
+	\end{equation}
+	
 	
 	\begin{figure}[h!]
 		\centering \includegraphics[width=0.5\textwidth]{f3a.pdf}
