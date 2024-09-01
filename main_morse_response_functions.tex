@@ -233,7 +233,7 @@
 		}\label{fig1}
 	\end{figure}
 	
-	Thus, in this Section, we presented two forms of the equation of state. The first one expresses the pressure as a function of temperature and chemical potential, $P = P(T, \mu)$, and is represented by Eqs.~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}. The second one expresses the pressure as a function of temperature and density, $P = P(T, \bar{n})$, and is represented by Eqs.~\eqref{eq:eosNT} and~\eqref{eq:eosPTn_reduced}. These equations, together with the explicit dependency of density on temperature and chemical potential, $\bar{n} = \bar{n}(T, \mu)$, see Eq.~\eqref{eq:density}, are the basis for the calculation of the thermodynamic response functions in the next Section~\ref{sec:respons_functions}  
+	Thus, in this Section, we presented two forms of the equation of state. The first one expresses the pressure as a function of temperature and chemical potential, $P = P(T, \mu)$, and is represented by equivalent Eqs.~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}. The second one expresses the pressure as a function of temperature and density, $P = P(T, \bar{n})$, and is represented by equivalent Eqs.~\eqref{eq:eosNT} and~\eqref{eq:eosPTn_reduced}. These equations, together with the explicit dependency of density on temperature and chemical potential, $\bar{n} = \bar{n}(T, \mu)$, see Eq.~\eqref{eq:density}, are the basis for the calculation of the thermodynamic response functions in the next Section~\ref{sec:respons_functions}  
 	
 	\section{\label{sec:respons_functions}Thermodynamic response functions}
 	
@@ -243,7 +243,7 @@
 		\label{def:isotherm_compres}
 		K_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,\langle N\rangle}.
 	\end{equation}
-	Let us perform some transformations to rewrite $K_T$ into a form that is more suitable for the equation of state~\eqref{eq:eosMT}
+	Let us perform some transformations to rewrite $K_T$ into a form that is more suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}
 	\begin{eqnarray*}
 		K_T & = & - \frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,\langle N\rangle}
 		\\
@@ -292,6 +292,15 @@
 		& = & \frac{\varepsilon^2}{\bar{n}^2} \left(\frac{\partial^2 P^*}{\partial \mu^2}\right)_T.
 	\end{eqnarray}
 	Now, either Eq.~\eqref{eq:eosPTM_reduced} or Eq.~\eqref{eq:density} can be used to explicitly calculate $K^*_T$, with the result expressed as a function of temperature and chemical potential.
+	
+	If it is preferable to use the equation of state in the form $P=P(T, \bar{n})$, see~\eqref{eq:eosNT} and~\eqref{eq:eosPTn_reduced}, then the most suitable expressions for the isothermal compressibility are
+	\begin{equation}
+		K_T = \frac{1}{\bar{n}} \left(\frac{\partial P}{\partial \bar{n}}\right)^{-1}_T
+	\end{equation}
+	and 
+	\begin{equation}
+		K^*_T = \frac{1}{\bar{n}} \left(\frac{\partial P^*}{\partial \bar{n}}\right)^{-1}_T.
+	\end{equation}
 	
 	Figure~\ref{fig2a} illustrates the dependency of the compressibility $K^*_T$ on the density $\bar{n}$ for various values of temperature above the critical one. The dependency of $K^*_T$ on the effective chemical potential $M$ is displayed in Fig~\ref{fig2b}.
 	
