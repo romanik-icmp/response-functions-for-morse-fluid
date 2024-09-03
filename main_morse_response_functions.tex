@@ -126,6 +126,7 @@
 	
 	The quantity $\tilde D(0)$ entering equations~\eqref{eq:eosMT} and~\eqref{chem_pot} is a function of temperature
 	\begin{equation}
+	\label{def:D0}
 	\tilde D(0) = g_2 - \frac{1}{2} \frac{g_3^2}{g_4} - \frac{1}{\beta W(0)}.
 	\end{equation}
 	The condition $\tilde{D}(0) = 0$ defines the critical temperature~\cite[see Eq.(31)]{KozlovskiiDobush2020}
@@ -491,10 +492,32 @@
 	\end{equation}
 	which is easily derived from the cyclic relation between $P$, $V$ and $T$. In our case, this equality is exactly reproduced by substituting explicit expressions for $K_T$, $\alpha_P$, and $\beta_V$ obtained from the equation of state~\eqref{eq:eosMT} (or~\eqref{eq:eosNT}). 
 	
-	\newpage 
+	%\newpage 
 	
 	\section{Conclusions}
 	Thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient, are calculated for a many-particle system interacting through a modified Morse potential.
+	
+	\appendix
+	\renewcommand{\theequation}{A.\arabic{equation}}
+	\setcounter{equation}{0}
+	
+	\section{\label{sec:app-a} Explicit expressions for derivatives}
+	In this appendinx, explicit expressions are presented for derivatives of quantities entering the equation of state, with respect to temperature. This expressions are useful while calculating the response functions in Section~\ref{sec:respons_functions}.
+	
+	For the quantity $\bar{M}$ from Eq.~\eqref{eq:M_nT} one has
+	\begin{equation}
+		\left( \frac{\partial \bar{M}}{\partial \tau} \right)_{\bar{n}} =
+		\frac{k_{\rm B}T_c \rho_n}{W(0)} \frac{1 - \omega_0}{1 + \tau\omega_0},
+	\end{equation}
+	where
+	\begin{equation*}
+		\omega_0 = \frac{\chi_0 + A_{\gamma}}{B - 1 + \chi_0}.
+	\end{equation*}
+	For $\tilde{D}(0)$ from~\eqref{def:D0} one has
+	\begin{equation}
+		\frac{\partial \tilde{D}(0)}{\partial \tau} = -\frac{k_{\rm B}T_c}{W(0)} \frac{1 - \omega_0}{1 + \tau \omega_0}.
+	\end{equation}
+	
 	
 	%\bibliographystyle{cmpj} % still looking for the best style
 	\bibliographystyle{elsarticle-num}
