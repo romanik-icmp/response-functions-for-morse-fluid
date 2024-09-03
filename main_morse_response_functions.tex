@@ -35,9 +35,14 @@
 	}
 	\section{Introduction}
 	
-	In this work we continue our study of the thermodynamic behavior of a cell fluid model, which was defined in~\cite{KozitskyKozlovskiiDobush2018book,KozitskyKozlovskiiDobush2020}. In works~\cite{KozlovskiiDobush2020,PylyukDobush2020,PylyukEtAlJML2023,PylyukKozlovskiiDobushUJP2023b} this model was used with a modified Morse potential describing the particle interaction. In particular, the equation of state was obtained in~\cite{KozlovskiiDobush2020} in the zero-mode approximation. This equation of state is used in the current work to calculate thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient.
+	In this work we continue our study of the thermodynamic behavior of a cell fluid model, which was defined in~\cite{KozitskyKozlovskiiDobush2018book,KozitskyKozlovskiiDobush2020}. In works~\cite{KozlovskiiDobush2020,PylyukDobush2020,PylyukEtAlJML2023,PylyukKozlovskiiDobushUJP2023b} this model was used with a modified Morse potential describing the particle interaction. In particular, the equation of state was obtained in~\cite{KozlovskiiDobush2020} in the zero-mode approximation. This equation of state is used in the current work to calculate thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient. 
 	
-	\section{The interaction potential}
+	As the problem was considered in the framework of the grand canonical ensemble, the initial equation of state is formulated in terms of pressure $P$, temperature $T$ and the chemical potential $\mu$, $P = P(T,\mu)$. To leverage this form of the equation of state for calculation of the response functions, the corresponding definitions should be transformed to proper derivatives with respect to temperature and chemical potential~\cite{StrokerMeier2021}. For each response function considered in this paper, we present such transformation in a dedicated subsection. On the other hand, within the approach applied here, the chemical potential can be explicitly expressed via the number particle density $\rho$ and temperature. This gives rise to the equation of state in the form $P = P(T, \rho)$, in which case it is suitable to re-express the response functions in terms of derivatives with respect to temperature and density.
+	
+	In Section~\ref{sec:potential} we present the modified Morse potential used in our work, and briefly compare it with other possible modifications. Section~\ref{sec:eos} is dedicated to the explicit expressions for the equation of state. In Section~\ref{sec:respons_functions} the expressions for response functions are derived in terms of thermodynamic derivatives suitable for different forms of the equation of state.
+
+	
+	\section{\label{sec:potential}The interaction potential}
 	The potential of interaction between particles is taken in a form of a modified Morse potential
 	\begin{equation}
 		\label{def:mod_morse}
