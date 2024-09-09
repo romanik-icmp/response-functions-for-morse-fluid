@@ -221,15 +221,13 @@ Thus, in this Section, we presented two forms of the equation of state. The firs
 The isothermal compressibility is defined by
 \begin{equation}
 	\label{def:isotherm_compres}
-	K_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,\langle N\rangle}.
+	K_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T, N}.
 \end{equation}
 Let us perform some transformations to rewrite $K_T$ into a form that is more suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}
 \begin{eqnarray*}
-	K_T & = & - \frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,\langle N\rangle}
+	K_T & = & - \frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,N}
 	\\
-	& = & -\rho \left(\frac{\partial \left(\frac{1}{\rho}\right)}{\partial P}\right)_{T,\langle N\rangle}
-	\\
-	& = & \frac{1}{\rho} \left(\frac{\partial \rho}{\partial P} \right)_{T,\langle N\rangle}
+	& = & \frac{1}{\rho} \left(\frac{\partial \rho}{\partial P} \right)_{T,N}
 	\\
 	& = & \frac{1}{\rho} \frac{\left(\partial \rho / \partial \mu\right)_{T}}
 	{\left(\partial P / \partial \mu\right)_{T}},
@@ -336,8 +334,7 @@ Substituting this result into the formula for $\beta_V$, we arrive at the final 
 	\left(\frac{\partial \bar{n}}{\partial T}\right)_{\mu}
 	\left(\frac{\partial \bar{n}}{\partial \mu}\right)^{-1}_{T}
 \end{equation}
-which is easily calculated based on Eqs.~\eqref{eq:eosMT} and~\eqref{eq:density}.\\
-(NB. Compare this equation with Eq.(17) from~\cite{StrokerMeier2021})
+which\footnote{Compare this equation for $\beta_V$ with Eq.(17) from~\cite{StrokerMeier2021}} is easily calculated based on Eqs.~\eqref{eq:eosMT} and~\eqref{eq:density}.
 
 We introduce the reduced thermal pressure coefficient by
 \begin{equation}
@@ -386,7 +383,7 @@ Figure~\ref{fig3a} shows the dependency of the pressure coefficient $\beta^*_V$ 
 \subsection{Thermal expansion coefficient}
 The thermal expansion coefficient is defined by
 \begin{equation}
-	\alpha_P = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P,\langle N\rangle}.
+	\alpha_P = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P,N}.
 \end{equation}
 We rewrite $\alpha_P$ into a form suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}
 \begin{eqnarray}
@@ -414,13 +411,13 @@ we get
 \end{eqnarray*}
 Substituting the result into the expression for $\alpha_P$, we arrive at the final formula for the thermal expansion coefficient
 \begin{equation}
+	\label{eq:alphaP1}
 	\alpha_P = -\frac{1}{\rho}\left(\frac{\partial \rho}{\partial T}\right)_{\mu}
 	+ \frac{1}{\rho} \left(\frac{\partial \rho}{\partial \mu}\right)_{T}
 	\left(\frac{\partial P}{\partial T}\right)_{\mu}
 	\left(\frac{\partial P}{\partial \mu}\right)^{-1}_{T}
 \end{equation}
-which is readily calculated based on Eqs.~\eqref{eq:eosMT} and~\eqref{eq:density}.\\
-(NB. Compare this equation with Eqs.(57)-(58) from~\cite{StrokerMeier2021})
+which\footnote{Compare this equation for $\alpha_P$ with Eqs.(57)-(58) from~\cite{StrokerMeier2021}} is readily calculated based on Eqs.~\eqref{eq:eosMT} and~\eqref{eq:density}.
 
 We introduce the reduced thermal expansion coefficient by
 \begin{equation}
@@ -428,13 +425,13 @@ We introduce the reduced thermal expansion coefficient by
 \end{equation}
 It is expressed in terms of the reduced quantities $P^*$ and $\bar{n}$ as follows
 \begin{equation}
-	\alpha^*_P = \frac{1}{T^*_c}
-	\left( 
-	-\frac{1}{\bar{n}}\left(\frac{\partial \bar{n}}{\partial \tau}\right)_{\mu}
-	+ \frac{1}{\bar{n}} \left(\frac{\partial \bar{n}}{\partial \mu}\right)_{T}
+	\alpha^*_P = \frac{1}{T^*_c \bar{n}}
+	\left[ 
+	-\left(\frac{\partial \bar{n}}{\partial \tau}\right)_{\mu}
+	+ \left(\frac{\partial \bar{n}}{\partial \mu}\right)_{T}
 	\left(\frac{\partial P^*}{\partial \tau}\right)_{\mu}
 	\left(\frac{\partial P^*}{\partial \mu}\right)^{-1}_{T} 
-	\right).
+	\right].
 \end{equation}
 
 If it is preferable to use the equation of state in the form $P=P(T, \bar{n})$, see~\eqref{eq:eosNT} and~\eqref{eq:eosPTn_reduced}, then we need to rewrite the definition for $\alpha_P$ accordingly. We start with~\eqref{eq:alpha_vs_rho} and apply the cyclic relation
@@ -482,7 +479,7 @@ Thermodynamic response functions, namely the isothermal compressibility, the the
 \setcounter{equation}{0}
 
 \section{\label{sec:app-a} Explicit expressions for derivatives}
-In this appendix, explicit expressions are presented for derivatives of quantities entering the equation of state, with respect to temperature. This expressions are useful while calculating the response functions in Section~\ref{sec:respons_functions}.
+In this Appendix, we provide an explicit example of differentiating the equation of state, namely~\eqref{eq:eosPTn_reduced}, by deriving the expression for the thermal pressure coefficient $\beta^*_V$ from~\eqref{eq:beta_star_n}.
 
 For the quantity $\bar{M}$ from Eq.~\eqref{eq:M_nT} one has
 \begin{equation}
