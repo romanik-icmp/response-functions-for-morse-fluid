@@ -2,30 +2,32 @@
 
 In this work we continue our study of the thermodynamic behavior of a cell fluid model, which was defined in~\cite{KozitskyKozlovskiiDobush2018book,KozitskyKozlovskiiDobush2020}. In works~\cite{KozlovskiiDobush2020,PylyukDobush2020,PylyukEtAlJML2023,PylyukKozlovskiiDobushUJP2023b} this model was used with a modified Morse potential describing the particle interaction. In particular, the equation of state was obtained in~\cite{KozlovskiiDobush2020} in the zero-mode approximation. This equation of state is used in the current work to calculate thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient. 
 
-As the problem was considered in the framework of the grand canonical ensemble, the initial equation of state is formulated in terms of pressure $P$, temperature $T$ and the chemical potential $\mu$, $P = P(T,\mu)$. To leverage this form of the equation of state for calculation of the response functions, the corresponding definitions should be transformed to proper derivatives with respect to temperature and chemical potential~\cite{StrokerMeier2021}. For each response function considered in this paper, we present such transformation in a dedicated subsection. On the other hand, within the approach applied here, the chemical potential can be explicitly expressed via the number particle density $\rho$ and temperature. This gives rise to the equation of state in the form $P = P(T, \rho)$, in which case it is suitable to re-express the response functions in terms of derivatives with respect to temperature and density.
+As the problem has been considered in the framework of the grand canonical ensemble, the initial equation of state is formulated in terms of pressure $P$, temperature $T$ and the chemical potential $\mu$, $P = P(T,\mu)$. To leverage this form of the equation of state for calculation of the response functions, the corresponding definitions should be transformed to proper derivatives with respect to temperature and chemical potential~\cite{StrokerMeier2021}. For each response function considered in this paper, we present such transformation in a dedicated subsection. On the other hand, within the approach applied here, the chemical potential can be explicitly expressed via the number particle density $\rho$ and temperature. This gives rise to the equation of state in the form $P = P(T, \rho)$, in which case it is suitable to re-express the response functions in terms of derivatives with respect to temperature and density.
 
 In Section~\ref{sec:potential} we present the modified Morse potential used in our work, and briefly compare it with other possible modifications. Section~\ref{sec:eos} is dedicated to the explicit expressions for the equation of state. In Section~\ref{sec:respons_functions} the expressions for response functions are derived in terms of thermodynamic derivatives suitable for different forms of the equation of state.
 
 
 \section{\label{sec:potential}The interaction potential}
 The potential of interaction between particles is taken in a form of a modified Morse potential
-\begin{equation}
+\begin{eqnarray}
 	\label{def:mod_morse}
-	U(r) = \varepsilon C_{H} \left[A {\rm e}^{-n_0(r-R_0)/\alpha} + {\rm e}^{-\gamma(r - R_0)/\alpha} -2{\rm e}^{-(r-R_0)/\alpha}\right],
-\end{equation}
-where $R_0$ is the coordinate of the potential minimum, $\alpha$ is an effective range of interaction, $\gamma$ and $n_0$ are parameters of the model. Other two constants $C_{H}$ and $A$ are expressed via $\gamma$ and $n_0$ as
+	U(r) & = & \varepsilon C_{H} \left[A {\rm e}^{-n_0(r-R_0)/\alpha} \right.
+	\nonumber\\
+	&& + \left. {\rm e}^{-\gamma(r - R_0)/\alpha} -2{\rm e}^{-(r-R_0)/\alpha}\right],
+\end{eqnarray}
+where $R_0$ is the coordinate of the potential minimum, $\alpha$ is an effective range of interaction, $\gamma$ and $n_0$ are parameters of the model. Other two constants $C_{H}$ and $A$ are expressed via $\gamma$ and $n_0$ as follows
 \begin{equation}
 	C_{H} = \frac{n_0}{n_0 + \gamma - 2}, \quad A = \frac{2 - \gamma}{n_0},
 \end{equation}
 where $\varepsilon$ is the depth of the potential well at $r=R_0$. This potential is reduced to the ordinary Morse potential~\cite{Morse1929} at $\gamma=2$. For a more detailed discussion of such modified Morse potential, see Sections~1 and~2 in~\cite{KozlovskiiDobush2020}.
 
-Modifications of the Morse potential were used in other works as well. For example, in~\cite{MartinezValenciaEtAl2013} a repulsive term in a form of a power of $r^{-1}$ was added to the ordinary Morse potential, and the influence of the softness of such a term was investigated on the coordinates of the critical point. The generalized form of the Morse potential was suggested in~\cite{BiswasHamann1985}
+Modifications of the Morse potential have been used in other works as well. For example, in~\cite{MartinezValenciaEtAl2013} a repulsive term in a form of a power of $r^{-1}$ was added to the ordinary Morse potential, and the influence of the softness of such a term was investigated on the coordinates of the critical point. The generalized form of the Morse potential was suggested in~\cite{BiswasHamann1985}
 \begin{equation}
 	U(r) = A_1 {\rm e}^{-\lambda_1 r} + A_2 {\rm e}^{-\lambda_2 r}
 \end{equation} 
 with application to silicon structural energies, and was also considered in~\cite{Lim2005} as the potential for Be-S and H-Na compounds.
 
-Our modification contains an additional repulsive term, similar to~\cite{MartinezValenciaEtAl2013}, as well as introduces parameter $\gamma$, which can vary as opposed to being strictly equal to 2 in the Morse potential. Including the repulsive term enables us to single out a reference system and apply the method of collective variables to calculating the grand partition function~[REFERENCE NEEDED].
+Our modification contains an additional repulsive term, similarly to~\cite{MartinezValenciaEtAl2013}, as well as introduces parameter $\gamma$, which can vary as opposed to being strictly equal to 2 in the Morse potential. Including the repulsive term enables us to single out a reference system (in the reciprocal space) and apply the method of collective variables to calculating the grand partition function~[REFERENCE NEEDED].
 
 \section{\label{sec:eos}The equation of state}
 \subsection{Pressure as a function of temperature and chemical potential}
@@ -62,8 +64,12 @@ The parameter $\chi_0$ is used in~\cite{KozlovskiiDobush2020} to single out a co
 
 The coefficients $g_n$ are given by the formulas:
 \begin{align}
-	& g_0 = \ln T_0, \qquad g_1 = T_1/T_0, \qquad g_2 = T_2/T_0 - g_1^2,  \nonumber \\
-	& g_3 = T_3/T_0 - g_1^3 - 3g_1 g_2, \quad \qquad  g_4 = T_4/T_0 - g_1^4 - 6 g_1^2 g_2 - 4 g_1 g_3 - 3 g_2^2, \nonumber\\
+	& g_0 = \ln T_0, \qquad g_1 = T_1/T_0, \qquad g_2 = T_2/T_0 - g_1^2,  
+	\nonumber \\
+	& g_3 = T_3/T_0 - g_1^3 - 3g_1 g_2, 
+	\nonumber\\
+	& g_4 = T_4/T_0 - g_1^4 - 6 g_1^2 g_2 - 4 g_1 g_3 - 3 g_2^2, 
+	\nonumber\\
 	& a_4 = -g_4,
 \end{align}
 where $T_n(p,\alpha^*)$ are the following special functions
@@ -79,7 +85,7 @@ The quantity $\beta_c$ denotes the critical value of the inverse temperature. In
 \begin{equation*}
 	\varepsilon\beta_c = 0.200, \quad \frac{k_{\rm B} T_c}{\varepsilon} = 4.995.
 \end{equation*}
-We also use the reduced temperature defined as $T = k_{\rm B}T/\varepsilon$, and its critical value $T^*_c = 4.995.$
+We also use the reduced temperature defined as $T = k_{\rm B}T/\varepsilon$, and thus its critical value $T^*_c = 4.995.$
 
 Since $p$ is independent of temperature, the coefficients $g_n$ are also independent of temperature. The numerical values for other coefficients used in this paper are the same as those in~\cite[see Eqs.(5), (23), and (24)]{KozlovskiiDobush2020}:
 \begin{eqnarray}
@@ -101,7 +107,9 @@ The condition $\tilde{D}(0) = 0$ defines the critical temperature~\cite[see Eq.(
 
 The function $E_\mu(M, T)$ from the equation \eqref{eq:eosMT} is provided by
 \begin{eqnarray}\label{eq:E_mu}
-	E_\mu (M, T) & = & - \frac{\ln (2\pi \beta W(0))}{2 N_v}  +  g_0 - \frac{\beta W(0)}{2} 
+	E_\mu (M, T) & = & - \frac{\ln (2\pi \beta W(0))}{2 N_v}  
+	\nonumber\\
+	&& +  g_0 - \frac{\beta W(0)}{2} 
 	\left(\frac{\tilde\mu}{W(0)} \right)^{2} 
 	\nonumber\\
 	&& - \frac{g_3}{g_4} {M} \! - \frac{g_3^2}{2 g_4^2}  \tilde D(0) - \frac{1}{24} \frac{g_3^4}{g_4^3}. 
@@ -132,20 +140,21 @@ Let us introduce the reduced pressure
 	P^* \equiv \frac{P v}{\varepsilon}.
 \end{equation}
 Considering the equation of state~\eqref{eq:eosMT}, $P^*$ is explicitly written as
-\begin{equation}
+\begin{eqnarray}
 	\label{eq:eosPTM_reduced}
-	P^* = (1 + \tau)T^*_c \left( E_\mu(M, T) + M \bar \rho_0 + \frac{1}{2} \tilde D(0) \bar \rho_0^2 - \frac{a_4}{24} \bar \rho_0^4 \right).
-\end{equation}
-This equation can be easily represented graphically. Figure~\ref{fig1} illustrates the relationship between the reduced pressure $P^*$ and the effective chemical potential $M$ for various values of the reduced temperature $\tau$, at and above the critical temperature. At the critical point $M=0, \tau=0$, $P^*_c = 1.606$. 
+	P^* & = & (1 + \tau)T^*_c \bigg[ E_\mu(M, T) 
+	\nonumber\\
+	&& + M \bar \rho_0 + \frac{1}{2} \tilde D(0) \bar \rho_0^2 - \frac{a_4}{24} \bar \rho_0^4
+	\bigg].
+\end{eqnarray}
+This equation can be easily represented graphically. Figure~\ref{fig1} illustrates the relationship between the reduced pressure $P^*$ and the effective chemical potential $M$ for various values of the relative temperature $\tau$, at and above the critical temperature. At the critical point $M=0, \tau=0$, $P^*_c = 1.606$. 
 
 
 \subsection{Pressure as a function of temperature and density}
 In this work, by density we mean the particle number density $\rho = \langle N \rangle / V$.
-In the framework of the grand canonical ensemble the average number of particles $\left\langle N \right\rangle$ is a partial derivative of natural logarithm of the grand partition function $\Xi$ with respect to $\beta \mu$ 
+In the framework of the grand canonical ensemble the average number of particles $\left\langle N \right\rangle$ is found by 
 \begin{eqnarray*}
 	\langle N \rangle & = & \left(\frac{\partial \ln\Xi}{\partial \beta \mu}\right)_{T,V} 
-	\\
-	& = & \left(\frac{\partial (PV)}{\partial \mu}\right)_{T,V}
 	\\
 	& = & V \left(\frac{\partial P}{\partial \mu}\right)_{T,V}.
 \end{eqnarray*}
@@ -155,15 +164,15 @@ From this equation it follows
 \end{equation*}
 and thus
 \begin{equation}
-	\bar{n} \equiv \frac{\langle N \rangle}{V} v = \frac{\langle N \rangle}{N_v} = v \left(\frac{\partial P}{\partial \mu}\right)_{T,V} 
+	\bar{n} \equiv \frac{\langle N \rangle}{V} v = v \left(\frac{\partial P}{\partial \mu}\right)_{T,V} 
 	= \left(\frac{\partial (Pv\beta)}{\partial (\beta \mu)}\right)_{T,V}.
 \end{equation}
-The quantity $\bar{n}$, on the one hand, has the meaning of the reduced particle number density. In the context of the cell model, on the other hand, it is the average number of particles per cell.
+The quantity $\bar{n}$, on the one hand, has the meaning of the reduced particle number density, and is usually denoted by $\rho^*$ in the literature on simple fluids~\cite{HansenMcDonald2013}. In the context of the cell model, on the other hand, it is the average number of particles per cell.
 Taking explicit derivatives, we arrive at
 \begin{equation}\label{eq:density}
 	\bar n = n_g - M + \frac{ \bar \rho_0}{\beta W(0)}.
 \end{equation}
-The quantity $n_g$ in the equation \eqref{eq:density} is the critical density
+The quantity $n_g$ in the equation \eqref{eq:density} is the critical density~\cite{KozlovskiiDobush2020}
 \begin{eqnarray}\label{eq:crit_dens}
 	n_g & = & g_1 - \frac{g_3}{g_4}\left(  g_2 - \frac{1}{2} \frac{g_3^2}{g_4}\right) - \frac{1}{6} \frac{g_3^3}{g_4^2} 
 	\nonumber\\
@@ -184,10 +193,11 @@ where
 	& \rho_{n} = - 2 \left(\frac{g_3^2 - 2g_2 g_4}{g_4^2} \right)^{\frac{1}{2}} \cos \left( \frac{\alpha_n}{3} + \frac{\pi}{3} \right), \\
 	& \alpha_n = \arccos \left( \left( - \frac{9 g_4^4}{\left( 2 g_2 g_4 - g_3^2\right)^3}\right)^{\frac{1}{2}} (n_g - \bar n)\right). \nonumber 
 \end{align}
+The notation $\bar{M}$ represents the effective chemical potential as a function of temperature and density $\bar{n}$, while $M$ represents the effective chemical potential as a function of temperature and chemical potential~$\mu$.
 
 At $T>T_c$ the equation of state of a cell fluid model in terms of the density and the temperature has the following form
 \begin{equation}\label{eq:eosNT}
-	Pv\beta = E_\eta (\bar n,T) + \bar M \rho_{n} + \frac{\tilde D(0)}{2} \rho_{n}^2 - \frac{a_4}{24} \rho_{n}^4,
+	Pv\beta = E_\eta (\bar n,T) + \bar M \rho_{n} + \frac{\tilde D(0)}{2} \rho_{n}^2 - \frac{a_4}{24} \rho_{n}^4.
 \end{equation}
 The quantity $E_\nu (\bar n, T)$ in \eqref{eq:ro_nT} is the function $E_\mu (M,T)$ \eqref{eq:E_mu} rewritten in terms of density and temperature taking into account the expression \eqref{eq:M_nT}
 \begin{eqnarray}\label{eq:E_nu}
@@ -199,12 +209,14 @@ The quantity $E_\nu (\bar n, T)$ in \eqref{eq:ro_nT} is the function $E_\mu (M,T
 	&& - \frac{g_3}{g_4} {\bar{M}} - \frac{g_3^2}{2 g_4^2}  \tilde D(0) - \frac{1}{24} \frac{g_3^4}{g_4^3}. 
 \end{eqnarray}
 For the reduced pressure we write
-\begin{equation}
+\begin{eqnarray}
 	\label{eq:eosPTn_reduced}
-	P^* = (1 + \tau)T^*_c \left(E_\eta (\bar{n},T) + \bar{M} \rho_{n} + \frac{\tilde D(0)}{2} \rho_{n}^2 - \frac{a_4}{24} \rho_{n}^4\right).
-\end{equation}
+	P^* & = & (1 + \tau)T^*_c \bigg[ E_\eta (\bar{n},T) 
+	\nonumber\\
+	&& + \bar{M} \rho_{n} + \frac{\tilde D(0)}{2} \rho_{n}^2 - \frac{a_4}{24} \rho_{n}^4\bigg].
+\end{eqnarray}
 
-Figure~1 shows the isotherms for the pressure $P^*$ versus density $\bar{n}$ (left-hand side) and versus the effective chemical potential $M$ (right-hand side).
+Figure~\ref{fig1} shows the isotherms for the pressure $P^*$ versus density $\bar{n}$ (left-hand side) and versus the effective chemical potential $M$ (right-hand side).
 \begin{figure}[h!]
 	\centering 
 	\includegraphics[width=0.446\textwidth]{f1a1.pdf} 
@@ -213,7 +225,7 @@ Figure~1 shows the isotherms for the pressure $P^*$ versus density $\bar{n}$ (le
 	}\label{fig1}
 \end{figure}
 
-Thus, in this Section, we presented two forms of the equation of state. The first one expresses the pressure as a function of temperature and chemical potential, $P = P(T, \mu)$, and is represented by equivalent Eqs.~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}. The second one expresses the pressure as a function of temperature and density, $P = P(T, \bar{n})$, and is represented by equivalent Eqs.~\eqref{eq:eosNT} and~\eqref{eq:eosPTn_reduced}. These equations, together with the explicit dependency of density on temperature and chemical potential, $\bar{n} = \bar{n}(T, \mu)$, see Eq.~\eqref{eq:density}, are the basis for the calculation of the thermodynamic response functions in the next Section~\ref{sec:respons_functions}  
+Thus, in this Section, we presented two forms of the equation of state. The first one expresses the pressure as a function of temperature and chemical potential, $P = P(T, \mu)$, and is represented by equivalent Eqs.~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}. The second one expresses the pressure as a function of temperature and density, $P = P(T, \bar{n})$, and is represented by equivalent Eqs.~\eqref{eq:eosNT} and~\eqref{eq:eosPTn_reduced}. These equations, together with the explicit dependency of density on temperature and chemical potential, $\bar{n} = \bar{n}(T, \mu)$, Eq.~\eqref{eq:density}, are the basis for the calculation of the thermodynamic response functions in the next Section~\ref{sec:respons_functions}. 
 
 \section{\label{sec:respons_functions}Thermodynamic response functions}
 
@@ -223,16 +235,14 @@ The isothermal compressibility is defined by
 	\label{def:isotherm_compres}
 	K_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T, N}.
 \end{equation}
-Let us perform some transformations to rewrite $K_T$ into a form that is more suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}
+Let us perform some transformations to rewrite $K_T$ into a form that is more suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}:
 \begin{eqnarray*}
-	K_T & = & - \frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T,N}
-	\\
-	& = & \frac{1}{\rho} \left(\frac{\partial \rho}{\partial P} \right)_{T,N}
+	K_T	& = & \frac{1}{\rho} \left(\frac{\partial \rho}{\partial P} \right)_{T,N}
 	\\
 	& = & \frac{1}{\rho} \frac{\left(\partial \rho / \partial \mu\right)_{T}}
-	{\left(\partial P / \partial \mu\right)_{T}},
+	{\left(\partial P / \partial \mu\right)_{T}}.
 \end{eqnarray*}
-where $\rho = \langle N \rangle / V$ is the particle number density. We have omitted the condition of constant $\langle N \rangle$ in the last line of the above equation since we have explicit dependencies on temperature and chemical potential for both pressure $P = P(T, \mu)$, see Eq.~\eqref{eq:eosMT}, and density $\rho = \rho(T, \mu)$, see Eq.~\eqref{eq:density}.
+We have omitted the condition of constant $N$ in the last line of the above equation since we have explicit dependencies on temperature and chemical potential for both pressure $P = P(T, \mu)$, Eq.~\eqref{eq:eosMT}, and density $\rho = \rho(T, \mu)$, Eq.~\eqref{eq:density}.
 Applying the Gibbs--Duhem equation
 \begin{equation}
 	N{\rm d}\mu = -S{\rm d}T + V{\rm d}P,
@@ -303,13 +313,11 @@ Figure~\ref{fig2a} illustrates the dependency of the compressibility $K^*_T$ on 
 The thermal pressure coefficient is defined by
 \begin{equation}
 	\label{def:therm_pres_coef}
-	\beta_V = \left( \frac{\partial P}{\partial T} \right)_{V,\langle N \rangle}.
+	\beta_V = \left( \frac{\partial P}{\partial T} \right)_{V,N}.
 \end{equation}
 We rewrite $\beta_V$ into a form that is suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}
 \begin{eqnarray}
-	\beta_V & = & \left(\frac{\partial P}{\partial T}\right)_{V, N}
-	\nonumber\\
-	& = & \left(\frac{\partial P}{\partial T}\right)_{\mu} + \left(\frac{\partial P}{\partial \mu}\right)_T \left(\frac{\partial \mu}{\partial T}\right)_{V, N}.
+	\beta_V	& = & \left(\frac{\partial P}{\partial T}\right)_{\mu} + \left(\frac{\partial P}{\partial \mu}\right)_T \left(\frac{\partial \mu}{\partial T}\right)_{V, N}.
 \end{eqnarray}
 Applying the cyclic relation
 \begin{equation*}
@@ -358,7 +366,7 @@ If it is preferable to use the equation of state in the form $P=P(T, \bar{n})$, 
 and
 \begin{equation}
 	\label{eq:beta_star_n}
-	\beta^*_V = \frac{1}{T^*_c} \left(\frac{\partial P^*}{\partial \tau}\right)_{\rho}
+	\beta^*_V = \frac{1}{T^*_c} \left(\frac{\partial P^*}{\partial \tau}\right)_{\rho}.
 \end{equation}
 
 
@@ -387,10 +395,8 @@ The thermal expansion coefficient is defined by
 \end{equation}
 We rewrite $\alpha_P$ into a form suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}
 \begin{eqnarray}
-	\alpha_P & = & \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P, N}
-	\nonumber\\
 	\label{eq:alpha_vs_rho}
-	& = & -\frac{1}{\rho} \left(\frac{\partial \rho}{\partial T}\right)_{P, N}
+	\alpha_P & = & -\frac{1}{\rho} \left(\frac{\partial \rho}{\partial T}\right)_{P, N}
 	\\
 	& = & -\frac{1}{\rho} \left(\frac{\partial \rho}{\partial T}\right)_{\mu} 
 	- \frac{1}{\rho} \left(\frac{\partial \rho}{\partial \mu}\right)_{T}
@@ -424,15 +430,16 @@ We introduce the reduced thermal expansion coefficient by
 	\alpha^*_P = \frac{\varepsilon}{k_{\rm B}} \alpha_P.
 \end{equation}
 It is expressed in terms of the reduced quantities $P^*$ and $\bar{n}$ as follows
-\begin{equation}
-	\alpha^*_P = \frac{1}{T^*_c \bar{n}}
+\begin{eqnarray}
+	\alpha^*_P & = & \frac{1}{T^*_c \bar{n}}
 	\left[ 
 	-\left(\frac{\partial \bar{n}}{\partial \tau}\right)_{\mu}
-	+ \left(\frac{\partial \bar{n}}{\partial \mu}\right)_{T}
+	\right. \nonumber\\
+	&& + \left.\left(\frac{\partial \bar{n}}{\partial \mu}\right)_{T}
 	\left(\frac{\partial P^*}{\partial \tau}\right)_{\mu}
 	\left(\frac{\partial P^*}{\partial \mu}\right)^{-1}_{T} 
 	\right].
-\end{equation}
+\end{eqnarray}
 
 If it is preferable to use the equation of state in the form $P=P(T, \bar{n})$, see~\eqref{eq:eosNT} and~\eqref{eq:eosPTn_reduced}, then we need to rewrite the definition for $\alpha_P$ accordingly. We start with~\eqref{eq:alpha_vs_rho} and apply the cyclic relation
 \begin{equation}
@@ -447,7 +454,7 @@ or for $\alpha^*_P$
 	\alpha^*_P = \frac{1}{\bar{n} T^*_c} \left(\frac{\partial P^*}{\partial \tau}\right)_{\rho} \left(\frac{\partial P^*}{\partial \bar{n}}\right)^{-1}_T.
 \end{equation}
 
-Figure~\ref{fig4a} shows the dependency of the reduced thermal expansion coefficient $\alpha^*_P$ on the density $\bar{n}$ for various values of temperature above the critical one. The dependency of $\alpha^*_P$ on the effective chemical potential $M$ is displayed in Figure~\ref{fig4b}.
+Figure~\ref{fig4a} shows the dependency of the reduced thermal expansion coefficient $\alpha^*_P$ on the density $\bar{n}$ for various values of temperature above the critical one. The dependency of $\alpha^*_P$ on the effective chemical potential $M$ is displayed in Fig.~\ref{fig4b}.
 
 \begin{figure}[h!]
 	\centering \includegraphics[width=0.5\textwidth]{f4a.pdf}
@@ -465,6 +472,7 @@ Figure~\ref{fig4a} shows the dependency of the reduced thermal expansion coeffic
 \subsection{Relation between response functions}
 The following thermodynamic identity holds between the calculated response functions
 \begin{equation}
+	\label{eq:identity}
 	\frac{\alpha_P}{K_T \beta_V} = \frac{\alpha^*_P}{K^*_T \beta^*_V} = 1,
 \end{equation}
 which is easily derived from the cyclic relation between $P$, $V$ and $T$. In our case, this equality is exactly reproduced by substituting explicit expressions for $K_T$, $\alpha_P$, and $\beta_V$ obtained from the equation of state~\eqref{eq:eosMT} (or~\eqref{eq:eosNT}). 
@@ -472,7 +480,7 @@ which is easily derived from the cyclic relation between $P$, $V$ and $T$. In ou
 %\newpage 
 
 \section{Conclusions}
-Thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient, are calculated for a many-particle system interacting through a modified Morse potential.
+Thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient, are calculated for a many-particle system interacting through a modified Morse potential. The starting point for these calculations are the equation of state obtained for a cell fluid model within the framework of the grand canonical ensemble in our previous work~\cite{KozlovskiiDobush2020}. The dependencies of the calculated response functions on the density and the effective chemical potential are illustrated graphically. The thermodynamic identity~\eqref{eq:identity} among these quantities is verified to confirm the self-consistency of the performed calculations.
 
 \appendix
 \renewcommand{\theequation}{A.\arabic{equation}}
