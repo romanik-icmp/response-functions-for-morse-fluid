@@ -1,5 +1,4 @@
 \section{Introduction}
-
 In this work we continue our study of the thermodynamic behavior of a cell fluid model, which was defined in~\cite{KozitskyKozlovskiiDobush2018book,KozitskyKozlovskiiDobush2020}. In works~\cite{KozlovskiiDobush2020,PylyukDobush2020,PylyukEtAlJML2023,PylyukKozlovskiiDobushUJP2023b} this model was used with a modified Morse potential describing the particle interaction. In particular, the equation of state was obtained in~\cite{KozlovskiiDobush2020} in the zero-mode approximation. This equation of state is used in the current work to calculate thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient. 
 
 As the problem has been considered in the framework of the grand canonical ensemble, the initial equation of state is formulated in terms of pressure $P$, temperature $T$ and the chemical potential $\mu$, $P = P(T,\mu)$. To leverage this form of the equation of state for calculation of the response functions, the corresponding definitions should be transformed to proper derivatives with respect to temperature and chemical potential~\cite{StrokerMeier2021}. For each response function considered in this paper, we present such transformation in a dedicated subsection. On the other hand, within the approach applied here, the chemical potential can be explicitly expressed via the number particle density $\rho$ and temperature. This gives rise to the equation of state in the form $P = P(T, \rho)$, in which case it is suitable to re-express the response functions in terms of derivatives with respect to temperature and density.
@@ -170,28 +169,28 @@ and thus
 The quantity $\rho^*$, on the one hand, is the reduced particle number density, which is the notation commonly used in the literature on simple fluids~\cite{HansenMcDonald2013}. In the context of the cell model, on the other hand, it is the average number of particles per cell.\footnote{In our previous works we denoted the reduced number density by $\bar{n}$. In the current work we switch to more common notation $\rho^*$.}
 Taking explicit derivatives, we arrive at
 \begin{equation}\label{eq:density}
-	\rho^* = n_g - M + \frac{ \bar \rho_0}{\beta W(0)}.
+	\rho^* = \rho^*_c - M + \frac{ \bar \rho_0}{\beta W(0)}.
 \end{equation}
-The quantity $n_g$ in the equation \eqref{eq:density} is the critical density~\cite{KozlovskiiDobush2020}
+The quantity $\rho^*_c$ in the equation \eqref{eq:density} is the critical density~\cite{KozlovskiiDobush2020}
 \begin{eqnarray}\label{eq:crit_dens}
-	n_g & = & g_1 - \frac{g_3}{g_4}\left(  g_2 - \frac{1}{2} \frac{g_3^2}{g_4}\right) - \frac{1}{6} \frac{g_3^3}{g_4^2} 
+	\rho^*_c & = & g_1 - \frac{g_3}{g_4}\left(  g_2 - \frac{1}{2} \frac{g_3^2}{g_4}\right) - \frac{1}{6} \frac{g_3^3}{g_4^2} 
 	\nonumber\\
 	& = & g_1 - \frac{g_2 g_3}{g_4} + \frac{g_3^3}{3g_4^2}
 \end{eqnarray}
 Its numerical value for parameters~\eqref{params} is
 \begin{equation*}
-	n_g = 0.978.
+	\rho^*_c = 0.978.
 \end{equation*}
 Equations~\eqref{eq:density} and~\eqref{eq:eosMT} jointly define a parametric relationship between pressure and density, with $M$ serving as the parameter. Figure~\ref{fig1} shows the dependency of the reduced pressure $P^*$ on the density $\rho^*$ for various values of the reduced temperature $\tau$, at and above the critical temperature.
 
 This dependency can also be expressed explicitly. To achieve this, we combine the equations~\eqref{eq:density} and~\eqref{eq:ro_M} to express the effective chemical potential $M$ as a function of density and temperature:
 \begin{equation}\label{eq:M_nT}
-	\bar M = \frac{\rho_{n}}{\beta W(0)} - (\rho^* - n_g),
+	\bar M = \frac{\rho_{n}}{\beta W(0)} - (\rho^* - \rho^*_c),
 \end{equation}
 where
 \begin{align} \label{eq:ro_nT}
 	& \rho_{n} = - 2 \left(\frac{g_3^2 - 2g_2 g_4}{g_4^2} \right)^{\frac{1}{2}} \cos \left( \frac{\alpha_n}{3} + \frac{\pi}{3} \right), \\
-	& \alpha_n = \arccos \left( \left( - \frac{9 g_4^4}{\left( 2 g_2 g_4 - g_3^2\right)^3}\right)^{\frac{1}{2}} (n_g - \rho^*)\right). \nonumber 
+	& \alpha_n = \arccos \left[ \left( - \frac{9 g_4^4}{\left( 2 g_2 g_4 - g_3^2\right)^3}\right)^{\frac{1}{2}} (\rho^*_c - \rho^*)\right]. \nonumber 
 \end{align}
 The notation $\bar{M}$ represents the effective chemical potential as a function of temperature and density $\rho^*$, while $M$ represents the effective chemical potential as a function of temperature and chemical potential~$\mu$.
 
@@ -216,12 +215,12 @@ For the reduced pressure we write
 	&& + \bar{M} \rho_{n} + \frac{\tilde D(0)}{2} \rho_{n}^2 - \frac{a_4}{24} \rho_{n}^4\bigg].
 \end{eqnarray}
 
-Figure~\ref{fig1} shows the isotherms for the pressure $P^*$ versus density $\rho^*$ (left-hand side) and versus the effective chemical potential $M$ (right-hand side).
+Figure~\ref{fig1} shows the isotherms for the pressure $P^*$ versus density $\rho^*$ (see Fig.~\ref{fig1}a), and versus the effective chemical potential $M$ (see Fig.~\ref{fig1}b).
 \begin{figure}[h!]
 	\centering 
 	\includegraphics[width=0.446\textwidth]{f1a1.pdf} 
 	\includegraphics[width=0.45\textwidth]{f1b1.pdf} 
-	\vskip-3mm\caption{Isotherms of the reduced pressure $P^*$ as a function of the density $\rho^*$ (on the left-hand side) and a function of the effective chemical potential $M$ (on the right-hand side) at $T \geq T_c$ represented by black lines. Thick grey lines on both figures correspond to isotherms of pressure at $T < T_c$ based on the results taken from~\cite{KozlovskiiDobush2020}. 
+	\vskip-3mm\caption{Isotherms of the reduced pressure $P^*$ as a function (a) of the density $\rho^*$, and (b) of the effective chemical potential $M$ at $T \geq T_c$ represented by black lines. Thick grey lines on both figures correspond to isotherms of pressure at $T < T_c$ based on the results taken from~\cite{KozlovskiiDobush2020}.
 	}\label{fig1}
 \end{figure}
 
@@ -290,7 +289,7 @@ and
 	\kappa^*_T = \frac{1}{\rho^*} \left(\frac{\partial P^*}{\partial \rho^*}\right)^{-1}_T.
 \end{equation}
 
-Figure~\ref{fig2a} illustrates the dependency of the compressibility $\kappa^*_T$ on the density $\rho^*$ for various values of temperature above the critical one. The dependency of $\kappa^*_T$ on the effective chemical potential $M$ is displayed in Fig~\ref{fig2b}.
+Figure~\ref{fig2a} illustrates the dependency of the compressibility $\kappa^*_T$ on the density $\rho^*$ for various values of temperature above the critical one. The dependency of $\kappa^*_T$ on the effective chemical potential $M$ is displayed in Fig.~\ref{fig2b}.
 
 \begin{figure}[htbp]
 	%\centering 
@@ -305,7 +304,7 @@ Figure~\ref{fig2a} illustrates the dependency of the compressibility $\kappa^*_T
 \begin{figure}[h!]
 	\centering \includegraphics[width=0.45\textwidth]{f2b.pdf}
 	\includegraphics[width=0.475\textwidth]{f2c.pdf}
-	\vskip-3mm\caption{The reduced isothermal compressibility $\kappa^*_T$ as a function of the effective chemical potential $M$ for different temperatures $\tau = (T - T_c)/T_c$ at $T > T_c$. The two figures differ in the scale of $M$. The left-hand-side figure covers a wider range of $M$, while the right-hand-side one focuses on a range of $M$ around its critical value $0$.
+	\vskip-3mm\caption{The reduced isothermal compressibility $\kappa^*_T$ as a function of the effective chemical potential $M$ for different temperatures $\tau = (T - T_c)/T_c$ at $T > T_c$. The two figures differ in the scale of $M$. Part~(a) covers a wider range of $M$. Part~(b) focuses on a range of $M$ around its critical value $0$.
 	}\label{fig2b}
 \end{figure}
 
@@ -372,12 +371,12 @@ and
 
 \begin{figure}[h!]
 	\centering \includegraphics[width=0.5\textwidth]{f3a.pdf}
-	\vskip-3mm\caption{The reduced thermal pressure coefficient $\beta^*_V$ as a function of the density $\rho^*$ at different values of relative temperature $\tau > 0$ ($T > T_c$). 
+	\vskip-3mm\caption{The reduced thermal pressure coefficient $\beta^*_V$ as a function of the density $\rho^*$ at different values of relative temperature $\tau > 0$~($T > T_c$). The temperature dependence is weak, resulting in multiple isotherms collapsing onto the same line, making them indistinguishable at the scale of the figure.
 	}\label{fig3a}
 \end{figure}
 \begin{figure}[h!]
 	\centering \includegraphics[width=0.5\textwidth]{f3b.pdf}
-	\vskip-3mm\caption{The reduced thermal pressure coefficient $\beta^*_V$ as a function of the effective chemical potential $M$ at different values of relative temperature $\tau > 0$ ($T > T_c$). 
+	\vskip-3mm\caption{The reduced thermal pressure coefficient $\beta^*_V$ as a function of the effective chemical potential $M$ at different values of relative temperature $\tau > 0$~($T > T_c$). 
 	}\label{fig3b}
 \end{figure}
 \begin{figure}[h!]
@@ -386,7 +385,7 @@ and
 	}\label{fig3c}
 \end{figure}
 
-Figure~\ref{fig3a} shows the dependency of the pressure coefficient $\beta^*_V$ on the density $\rho^*$ for various values of temperature above the critical one. The dependency of $\beta^*_V$ on the effective chemical potential $M$ is displayed in Fig~\ref{fig3b}.
+Figure~\ref{fig3a} shows the dependency of the pressure coefficient $\beta^*_V$ on the density $\rho^*$ for various values of temperature above the critical one. The dependency of $\beta^*_V$ on the effective chemical potential $M$ is displayed in Fig.~\ref{fig3b}. The dependency of $\beta^*_V$ on the relative temperature $\tau$ is displayed in Fig.~\ref{fig3c} for a few values of density.
 
 \subsection{Thermal expansion coefficient}
 The thermal expansion coefficient is defined by
@@ -458,14 +457,14 @@ Figure~\ref{fig4a} shows the dependency of the reduced thermal expansion coeffic
 
 \begin{figure}[h!]
 	\centering \includegraphics[width=0.5\textwidth]{f4a.pdf}
-	\vskip-3mm\caption{The reduced thermal expansion coefficient $\alpha^*_P$ as a function of the density $\rho^*$ at different values of relative temperature $\tau > 0$ ($T > T_c$). 
+	\vskip-3mm\caption{The reduced thermal expansion coefficient $\alpha^*_P$ as a function of the density $\rho^*$ at different values of relative temperature $\tau > 0$~($T > T_c$). 
 	}\label{fig4a}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering \includegraphics[width=0.45\textwidth]{f4b.pdf}
 	\includegraphics[width=0.475\textwidth]{f4c.pdf}
-	\vskip-3mm\caption{The reduced thermal expansion coefficient $\alpha^*_P$ as a function of the effective chemical potential $M$ for different temperatures $\tau = (T - T_c)/T_c$ at $T > T_c$. The two figures differ in the scale of $M$. The left-hand-side figure covers a wider range of $M$, while the right-hand-side one focuses on a range of $M$ around its critical value $0$.
+	\vskip-3mm\caption{The reduced thermal expansion coefficient $\alpha^*_P$ as a function of the effective chemical potential $M$ for different temperatures $\tau = (T - T_c)/T_c$ at $T > T_c$. The two figures differ in the scale of $M$. Part (a) covers a wider range of $M$. Part (b) focuses on a range of $M$ around its critical value~$0$.
 	}\label{fig4b}
 \end{figure}
 
