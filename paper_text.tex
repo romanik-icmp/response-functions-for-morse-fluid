@@ -233,11 +233,11 @@ Thus, in this Section, we presented two forms of the equation of state. The firs
 The isothermal compressibility is defined by
 \begin{equation}
 	\label{def:isotherm_compres}
-	K_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T, N}.
+	\kappa_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T, N}.
 \end{equation}
-Let us perform some transformations to rewrite $K_T$ into a form that is more suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}:
+Let us perform some transformations to rewrite $\kappa_T$ into a form that is more suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}:
 \begin{eqnarray*}
-	K_T	& = & \frac{1}{\rho} \left(\frac{\partial \rho}{\partial P} \right)_{T,N}
+	\kappa_T	& = & \frac{1}{\rho} \left(\frac{\partial \rho}{\partial P} \right)_{T,N}
 	\\
 	& = & \frac{1}{\rho} \frac{\left(\partial \rho / \partial \mu\right)_{T}}
 	{\left(\partial P / \partial \mu\right)_{T}}.
@@ -256,9 +256,9 @@ or
 	\label{eq:rho_dpdm}
 	\rho = \left(\frac{\partial P}{\partial \mu}\right)_T.
 \end{equation}
-Substituting this into the last expression for $K_T$, one gets
+Substituting this into the last expression for $\kappa_T$, one gets
 \begin{equation}
-	K_T = \frac{1}{\rho^2} \left(\frac{\partial \rho}{\partial \mu}\right)_{T}
+	\kappa_T = \frac{1}{\rho^2} \left(\frac{\partial \rho}{\partial \mu}\right)_{T}
 \end{equation}
 Finally, from~\eqref{eq:rho_dpdm} it follows that
 \begin{equation}
@@ -266,38 +266,38 @@ Finally, from~\eqref{eq:rho_dpdm} it follows that
 \end{equation}
 and ultimately we arrive at the very useful expression for the isothermal compressibility
 \begin{equation}
-	K_T = \frac{1}{\rho^2} \left(\frac{\partial^2 P}{\partial \mu^2}\right)_{T}
+	\kappa_T = \frac{1}{\rho^2} \left(\frac{\partial^2 P}{\partial \mu^2}\right)_{T}
 \end{equation}
 
 Let us introduce the reduced isothermal compressibility
 \begin{equation}
-	K^*_T \equiv \frac{\varepsilon K_T}{v}.
+	\kappa^*_T \equiv \frac{\varepsilon K_T}{v}.
 \end{equation}
-The quantity $K^*_T$ is dimensionless and is of order unity, except at the critical point itself, where it is divergent. It is expressed in terms of the reduced quantities $P^*$ and $\rho^*$ as follows
+The quantity $\kappa^*_T$ is dimensionless and is of order unity, except at the critical point itself, where it is divergent. It is expressed in terms of the reduced quantities $P^*$ and $\rho^*$ as follows
 \begin{eqnarray}
-	K^*_T & = & \frac{\varepsilon}{{\rho^*}^2} \left(\frac{\partial \rho^*}{\partial \mu}\right)_T
+	\kappa^*_T & = & \frac{\varepsilon}{{\rho^*}^2} \left(\frac{\partial \rho^*}{\partial \mu}\right)_T
 	\nonumber\\
 	& = & \frac{\varepsilon^2}{{\rho^*}^2} \left(\frac{\partial^2 P^*}{\partial \mu^2}\right)_T.
 \end{eqnarray}
-Now, either Eq.~\eqref{eq:eosPTM_reduced} or Eq.~\eqref{eq:density} can be used to explicitly calculate $K^*_T$, with the result expressed as a function of temperature and chemical potential.
+Now, either Eq.~\eqref{eq:eosPTM_reduced} or Eq.~\eqref{eq:density} can be used to explicitly calculate $\kappa^*_T$, with the result expressed as a function of temperature and chemical potential.
 
 If it is preferable to use the equation of state in the form $P=P(T, \rho^*)$, see~\eqref{eq:eosNT} and~\eqref{eq:eosPTn_reduced}, then the most suitable expressions for the isothermal compressibility are
 \begin{equation}
-	K_T = \frac{1}{\rho^*} \left(\frac{\partial P}{\partial \rho^*}\right)^{-1}_T
+	\kappa_T = \frac{1}{\rho^*} \left(\frac{\partial P}{\partial \rho^*}\right)^{-1}_T
 \end{equation}
 and 
 \begin{equation}
-	K^*_T = \frac{1}{\rho^*} \left(\frac{\partial P^*}{\partial \rho^*}\right)^{-1}_T.
+	\kappa^*_T = \frac{1}{\rho^*} \left(\frac{\partial P^*}{\partial \rho^*}\right)^{-1}_T.
 \end{equation}
 
-Figure~\ref{fig2a} illustrates the dependency of the compressibility $K^*_T$ on the density $\rho^*$ for various values of temperature above the critical one. The dependency of $K^*_T$ on the effective chemical potential $M$ is displayed in Fig~\ref{fig2b}.
+Figure~\ref{fig2a} illustrates the dependency of the compressibility $\kappa^*_T$ on the density $\rho^*$ for various values of temperature above the critical one. The dependency of $\kappa^*_T$ on the effective chemical potential $M$ is displayed in Fig~\ref{fig2b}.
 
 \begin{figure}[htbp]
 	%\centering 
 	\includegraphics[width=0.5\textwidth]{f2a.pdf}
 	%\includegraphics[width=\column]{f2a}
 	%\vskip-3mm
-	\caption{The reduced isothermal compressibility $K^*_T$ as a function of the density $\rho^*$ at different values of reduced temperature $\tau > 0$ ($T > T_c$). 
+	\caption{The reduced isothermal compressibility $\kappa^*_T$ as a function of the density $\rho^*$ at different values of reduced temperature $\tau > 0$ ($T > T_c$). 
 	}
 	\label{fig2a}
 \end{figure}
@@ -305,7 +305,7 @@ Figure~\ref{fig2a} illustrates the dependency of the compressibility $K^*_T$ on 
 \begin{figure}[h!]
 	\centering \includegraphics[width=0.45\textwidth]{f2b.pdf}
 	\includegraphics[width=0.475\textwidth]{f2c.pdf}
-	\vskip-3mm\caption{The reduced isothermal compressibility $K^*_T$ as a function of the effective chemical potential $M$ for different temperatures $\tau = (T - T_c)/T_c$ at $T > T_c$. The two figures differ in the scale of $M$. The left-hand-side figure covers a wider range of $M$, while the right-hand-side one focuses on a range of $M$ around its critical value $0$.
+	\vskip-3mm\caption{The reduced isothermal compressibility $\kappa^*_T$ as a function of the effective chemical potential $M$ for different temperatures $\tau = (T - T_c)/T_c$ at $T > T_c$. The two figures differ in the scale of $M$. The left-hand-side figure covers a wider range of $M$, while the right-hand-side one focuses on a range of $M$ around its critical value $0$.
 	}\label{fig2b}
 \end{figure}
 
@@ -473,9 +473,9 @@ Figure~\ref{fig4a} shows the dependency of the reduced thermal expansion coeffic
 The following thermodynamic identity holds between the calculated response functions
 \begin{equation}
 	\label{eq:identity}
-	\frac{\alpha_P}{K_T \beta_V} = \frac{\alpha^*_P}{K^*_T \beta^*_V} = 1,
+	\frac{\alpha_P}{\kappa_T \beta_V} = \frac{\alpha^*_P}{\kappa^*_T \beta^*_V} = 1,
 \end{equation}
-which is easily derived from the cyclic relation between $P$, $V$ and $T$. In our case, this equality is exactly reproduced by substituting explicit expressions for $K_T$, $\alpha_P$, and $\beta_V$ obtained from the equation of state~\eqref{eq:eosMT} (or~\eqref{eq:eosNT}). 
+which is easily derived from the cyclic relation between $P$, $V$ and $T$. In our case, this equality is exactly reproduced by substituting explicit expressions for $\kappa_T$, $\alpha_P$, and $\beta_V$ obtained from the equation of state~\eqref{eq:eosMT} (or~\eqref{eq:eosNT}). 
 
 %\newpage 
 
