@@ -531,12 +531,16 @@ Collecting these all formulas together, we can explicitly calculate $\beta^*_V$ 
 \end{eqnarray}
 Substituting the expressions for derivatives and grouping similar terms, one finally arrives at
 \begin{eqnarray}
-	\beta^*_V & = & E_\rho (\rho^*,T) + \bar{M} \rho_{n} + \frac{d}{2} \rho_{n}^2 - \frac{a_4}{24} \rho_{n}^4 + k_{\rm B} T_c (1+\tau)
+	\beta^*_V & = & E_\rho (\rho^*,T) + \bar{M} \rho_{n} + \frac{d}{2} \rho_{n}^2 - \frac{a_4}{24} \rho_{n}^4
 	\nonumber\\
-	&& \times \left\{ \frac{\beta^2}{2}  \Phi^{(r)}(0) [B - 1 - A_\gamma]	\left(\bar{M} - g_1+ \frac{g_3}{g_4} d + \frac{1}{6} \frac{g_3^3}{g_4^2} \right)^2 \right . \nonumber \\
-	&& \left . + \frac{1}{W(0)} \frac{1 - \omega_0}{1 + \tau \omega_0} \left[ \frac{g_3^2}{2 g_4^2} + \frac{\rho_n^2}{2} - \frac{g_3}{g_4} \rho_n  \right . \right . \nonumber \\
-	&& \left . \left . + \beta W(0) \left( \bar{M} - g_1+ \frac{g_3}{g_4} d + \frac{1}{6} \frac{g_3^3}{g_4^2} \right) \left( \frac{g_3}{g_4} - \rho_n \right)    \right] \right\}.
+	& + & \left\{ \frac{\beta}{2}  \Phi^{(r)}(0) [B - 1 - A_\gamma]	G_M^2 \right . \nonumber \\
+	& + & \left. \frac{1}{\beta W(0)} \frac{1 - \omega_0}{1 + \tau \omega_0} \left[ \frac{g_3^2}{2 g_4^2} + \frac{\rho_n^2}{2} - \frac{g_3}{g_4} \rho_n  \right . \right . \nonumber \\
+	& + & \left. \left. \beta W(0) G_M \left( \frac{g_3}{g_4} - \rho_n \right)    \right] \right\},
 \end{eqnarray}
+where we introduced notation
+\begin{equation*}
+	G_M = \bar{M} - g_1+ \frac{g_3}{g_4} d + \frac{1}{6} \frac{g_3^3}{g_4^2}.
+\end{equation*}
 
 Second, we derive the explicit expression for the isothermal compressibility $\kappa^*_T$ using~\eqref{eq:kappa_star_m}, taking the density $\rho^*$ from \eqref{eq:density}.
 For the effective chemical potential $M$ from \eqref{chem_pot} one has
@@ -549,7 +553,9 @@ For the quantity $\bar \rho_0$ from \eqref{eq:ro_MT} one has
 \end{equation}
 Using these two formulas we obtain the isothermal compressibility in explicit form  
 \begin{eqnarray}
-	\kappa_T^* & = & \frac{\epsilon}{\rho^{*2} W(0)} \nonumber \\
-	&& \times \left\{  \frac{1}{\beta W(0) g_4 \sqrt{Q_t}} \left[ \bar \rho_0 - 2 \left( - \frac{3M}{g_4} + \sqrt{Q_t} \right)^{\frac{1}{3}} \right] - 1 \right\}.
+	\kappa_T^* & = & \frac{\epsilon}{\rho^{*2} W(0)} \bigg\{ -1
+	\\
+	& + & \left. \frac{Q_t^{-1/2}}{\beta W(0) g_4} \left[ \bar \rho_0 - 2 \left( - \frac{3M}{g_4} + \sqrt{Q_t} \right)^{\frac{1}{3}} \right]\right\}.
+	\nonumber
 \end{eqnarray}	
 	
