@@ -273,12 +273,12 @@ Let us introduce the reduced isothermal compressibility
 	\kappa^*_T \equiv \frac{\varepsilon K_T}{v}.
 \end{equation}
 The quantity $\kappa^*_T$ is dimensionless and is of order unity, except at the critical point itself, where it is divergent. It is expressed in terms of the reduced quantities $P^*$ and $\rho^*$ as follows
-\begin{eqnarray}
+\begin{eqnarray}\label{eq:kappa_star_m}
 	\kappa^*_T & = & \frac{\varepsilon}{{\rho^*}^2} \left(\frac{\partial \rho^*}{\partial \mu}\right)_T
 	\nonumber\\
 	& = & \frac{\varepsilon^2}{{\rho^*}^2} \left(\frac{\partial^2 P^*}{\partial \mu^2}\right)_T.
 \end{eqnarray}
-Now, either Eq.~\eqref{eq:eosPTM_reduced} or Eq.~\eqref{eq:density} can be used to explicitly calculate $\kappa^*_T$, with the result expressed as a function of temperature and chemical potential.
+Now, either Eq.~\eqref{eq:eosPTM_reduced} or Eq.~\eqref{eq:density} can be used to explicitly calculate $\kappa^*_T$, with the result expressed as a function of temperature and chemical potential. As an example, in Appendix~\ref{sec:app-a} we provide the derivation of the relation for the isothermal compressibility from the upper line of \eqref{eq:kappa_star_m}.
 
 If it is preferable to use the equation of state in the form $P=P(T, \rho^*)$, see~\eqref{eq:eosNT} and~\eqref{eq:eosPTn_reduced}, then the most suitable expressions for the isothermal compressibility are
 \begin{equation}
@@ -536,3 +536,19 @@ Substituting the expressions for derivatives and grouping similar terms, one fin
 	&& \left . \left . + \beta W(0) \left( \bar{M} - g_1+ \frac{g_3}{g_4} d + \frac{1}{6} \frac{g_3^3}{g_4^2} \right) \left( \frac{g_3}{g_4} - \rho_n \right)    \right\} \right).
 \end{eqnarray}
 
+As an example, we also give the derivation of the relation for the isothermal compressibility $\kappa^*_T$ from the upper line of \eqref{eq:kappa_star_m} recalling the density $\rho^*$ defined in \eqref{eq:density}.
+ 
+For the effective chemical potential $M$ from \eqref{chem_pot} one has
+\begin{equation}
+\left(\frac{\partial M}{\partial \mu} \right)_T = \frac{1}{W(0)}.
+\end{equation}
+For the quantity $\bar \rho_0$ from \eqref{eq:ro_MT} one has
+\begin{equation}
+\left(\frac{\partial \bar \rho_0}{\partial \mu} \right)_T = \frac{1}{ g_4 W(0) \sqrt{Q_t}} \left( \bar \rho_0 - 2 \left[ - \frac{3M}{g_4} + \sqrt{Q_t} \right]^{\frac{1}{3}} \right).
+\end{equation}
+Using these two formulas we obtain the isothermal compressibility in explicit form  
+\begin{eqnarray}
+&&	\kappa_T^* = \frac{\epsilon}{\rho^{*2} W(0)} \nonumber \\
+&& \times \left\{  \frac{1}{\beta W(0) g_4 \sqrt{Q_t}} \left( \bar \rho_0 - 2 \left[ - \frac{3M}{g_4} + \sqrt{Q_t} \right]^{\frac{1}{3}} \right) - 1 \right\}.
+\end{eqnarray}	
+	
