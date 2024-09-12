@@ -273,12 +273,14 @@ Let us introduce the reduced isothermal compressibility
 	\kappa^*_T \equiv \frac{\varepsilon K_T}{v}.
 \end{equation}
 The quantity $\kappa^*_T$ is dimensionless and is of order unity, except at the critical point itself, where it is divergent. It is expressed in terms of the reduced quantities $P^*$ and $\rho^*$ as follows
-\begin{eqnarray}\label{eq:kappa_star_m}
+\begin{eqnarray}
+	\label{eq:kappa_star_m1}
 	\kappa^*_T & = & \frac{\varepsilon}{{\rho^*}^2} \left(\frac{\partial \rho^*}{\partial \mu}\right)_T
-	\nonumber\\
+	\\
+	\label{eq:kappa_star_m}
 	& = & \frac{\varepsilon^2}{{\rho^*}^2} \left(\frac{\partial^2 P^*}{\partial \mu^2}\right)_T.
 \end{eqnarray}
-Now, either Eq.~\eqref{eq:eosPTM_reduced} or Eq.~\eqref{eq:density} can be used to explicitly calculate $\kappa^*_T$, with the result expressed as a function of temperature and chemical potential. As an example, in Appendix~\ref{sec:app-a} we provide the derivation of the relation for the isothermal compressibility from the upper line of \eqref{eq:kappa_star_m}.
+Now, either Eq.~\eqref{eq:eosPTM_reduced} or Eq.~\eqref{eq:density} can be used to explicitly calculate $\kappa^*_T$, with the result expressed as a function of temperature and chemical potential. In Appendix~\ref{sec:app-a}, we provide the derivation of the explicit expression for the isothermal compressibility based on~\eqref{eq:kappa_star_m1}.
 
 If it is preferable to use the equation of state in the form $P=P(T, \rho^*)$, see~\eqref{eq:eosNT} and~\eqref{eq:eosPTn_reduced}, then the most suitable expressions for the isothermal compressibility are
 \begin{equation}
@@ -489,8 +491,9 @@ Thermodynamic response functions, namely the isothermal compressibility, the the
 \setcounter{equation}{0}
 
 \section{\label{sec:app-a} Explicit expressions for derivatives}
-In this Appendix, we provide an explicit example of differentiating the equation of state, namely~\eqref{eq:eosPTn_reduced}, by deriving the expression for the thermal pressure coefficient $\beta^*_V$ from~\eqref{eq:beta_star_n}.
+This Appendix contains two examples of explicit derivation of response functions. 
 
+First, we provide an explicit example of differentiating the equation of state, namely~\eqref{eq:eosPTn_reduced}, by deriving the expression for the thermal pressure coefficient $\beta^*_V$ from~\eqref{eq:beta_star_n}.
 For the quantity $\bar{M}$ from Eq.~\eqref{eq:M_nT} one has
 \begin{equation}
 	\left( \frac{\partial \bar{M}}{\partial \tau} \right)_{\rho^*} =
@@ -528,26 +531,25 @@ Collecting these all formulas together, we can explicitly calculate $\beta^*_V$ 
 \end{eqnarray}
 Substituting the expressions for derivatives and grouping similar terms, one finally arrives at
 \begin{eqnarray}
-	&& \beta^*_V  =  E_\rho (\rho^*,T) + \bar{M} \rho_{n} + \frac{d}{2} \rho_{n}^2 - \frac{a_4}{24} \rho_{n}^4 + k_{\rm B} T_c (1+\tau)
+	\beta^*_V & = & E_\rho (\rho^*,T) + \bar{M} \rho_{n} + \frac{d}{2} \rho_{n}^2 - \frac{a_4}{24} \rho_{n}^4 + k_{\rm B} T_c (1+\tau)
 	\nonumber\\
-	&& \times \left( \frac{\beta^2}{2}  \Phi^{(r)}(0) [B - 1 - A_\gamma]	\left(\bar{M} - g_1+ \frac{g_3}{g_4} d + \frac{1}{6} \frac{g_3^3}{g_4^2} \right)^2 \right . \nonumber \\
-	&& \left . + \frac{1}{W(0)} \frac{1 - \omega_0}{1 + \tau \omega_0} \left\{ \frac{g_3^2}{2 g_4^2} + \frac{\rho_n^2}{2} - \frac{g_3}{g_4} \rho_n  \right . \right . \nonumber \\
-	&& \left . \left . + \beta W(0) \left( \bar{M} - g_1+ \frac{g_3}{g_4} d + \frac{1}{6} \frac{g_3^3}{g_4^2} \right) \left( \frac{g_3}{g_4} - \rho_n \right)    \right\} \right).
+	&& \times \left\{ \frac{\beta^2}{2}  \Phi^{(r)}(0) [B - 1 - A_\gamma]	\left(\bar{M} - g_1+ \frac{g_3}{g_4} d + \frac{1}{6} \frac{g_3^3}{g_4^2} \right)^2 \right . \nonumber \\
+	&& \left . + \frac{1}{W(0)} \frac{1 - \omega_0}{1 + \tau \omega_0} \left[ \frac{g_3^2}{2 g_4^2} + \frac{\rho_n^2}{2} - \frac{g_3}{g_4} \rho_n  \right . \right . \nonumber \\
+	&& \left . \left . + \beta W(0) \left( \bar{M} - g_1+ \frac{g_3}{g_4} d + \frac{1}{6} \frac{g_3^3}{g_4^2} \right) \left( \frac{g_3}{g_4} - \rho_n \right)    \right] \right\}.
 \end{eqnarray}
 
-As an example, we also give the derivation of the relation for the isothermal compressibility $\kappa^*_T$ from the upper line of \eqref{eq:kappa_star_m} recalling the density $\rho^*$ defined in \eqref{eq:density}.
- 
+Second, we derive the explicit expression for the isothermal compressibility $\kappa^*_T$ using~\eqref{eq:kappa_star_m}, taking the density $\rho^*$ from \eqref{eq:density}.
 For the effective chemical potential $M$ from \eqref{chem_pot} one has
 \begin{equation}
 \left(\frac{\partial M}{\partial \mu} \right)_T = \frac{1}{W(0)}.
 \end{equation}
 For the quantity $\bar \rho_0$ from \eqref{eq:ro_MT} one has
 \begin{equation}
-\left(\frac{\partial \bar \rho_0}{\partial \mu} \right)_T = \frac{1}{ g_4 W(0) \sqrt{Q_t}} \left( \bar \rho_0 - 2 \left[ - \frac{3M}{g_4} + \sqrt{Q_t} \right]^{\frac{1}{3}} \right).
+\left(\frac{\partial \bar \rho_0}{\partial \mu} \right)_T = \frac{1}{ g_4 W(0) \sqrt{Q_t}} \left[ \bar \rho_0 - 2 \left( - \frac{3M}{g_4} + \sqrt{Q_t} \right)^{\frac{1}{3}} \right].
 \end{equation}
 Using these two formulas we obtain the isothermal compressibility in explicit form  
 \begin{eqnarray}
-&&	\kappa_T^* = \frac{\epsilon}{\rho^{*2} W(0)} \nonumber \\
-&& \times \left\{  \frac{1}{\beta W(0) g_4 \sqrt{Q_t}} \left( \bar \rho_0 - 2 \left[ - \frac{3M}{g_4} + \sqrt{Q_t} \right]^{\frac{1}{3}} \right) - 1 \right\}.
+	\kappa_T^* & = & \frac{\epsilon}{\rho^{*2} W(0)} \nonumber \\
+	&& \times \left\{  \frac{1}{\beta W(0) g_4 \sqrt{Q_t}} \left[ \bar \rho_0 - 2 \left( - \frac{3M}{g_4} + \sqrt{Q_t} \right)^{\frac{1}{3}} \right] - 1 \right\}.
 \end{eqnarray}	
 	
