@@ -1,4 +1,8 @@
 \section{Introduction}
+
+Thermodynamic response functions play a crucial role in understanding and characterizing the behavior of physical systems. These functions describe how a system responds to changes in its state variables, providing valuable insights into its thermodynamic properties. The most widely studied thermodynamic response functions of fluids are isothermal and adiabatic compressibilities, isobaric thermal expansion, isochoric thermal pressure coefficient and heat capacities either at constant pressure or at constant volume. Thermodynamic response functions are essential tools for understanding, predicting, and controlling the behavior of physical systems. They are used in various scientific and engineering disciplines to model, design, and optimize processes and to gain insights into the fundamental principles governing thermodynamic systems. Therefore, a key area of research involves examining the thermodynamic properties of simple fluids and fluid models through theoretical approaches, computer simulations, and experimental studies, covering both subcritical and supercritical regions.~\cite{Johnston2014book,YigzaweSadus2013,Velasco2011,Bulavin2024}. 
+
+
 In this work we continue our study of the thermodynamic behavior of a cell fluid model, which was defined in~\cite{KozitskyKozlovskiiDobush2018book,KozitskyKozlovskiiDobush2020}. This model was used with the Morse potential in studies~\cite{PylyukEtAlJML2023,PylyukKozlovskiiDobushUJP2023b} and with a modified Morse potential in~\cite{KozlovskiiDobush2020,PylyukDobush2020} as potentials describing the particle interaction. In particular, the equation of state was obtained in~\cite{KozlovskiiDobush2020} in the zero-mode approximation. This equation of state is used in the current work to calculate thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient. 
 
 As the problem has been considered in the framework of the grand canonical ensemble, the initial equation of state is formulated in terms of pressure $P$, temperature $T$ and the chemical potential $\mu$, $P = P(T,\mu)$. To leverage this form of the equation of state for calculation of the response functions, the corresponding definitions should be transformed to proper derivatives with respect to temperature and chemical potential~\cite{StrokerMeier2021}. For each response function considered in this paper, we present such transformation in a dedicated subsection. On the other hand, within the approach applied here, the chemical potential can be explicitly expressed via the number particle density $\rho$ and temperature. This gives rise to the equation of state in the form $P = P(T, \rho)$, in which case it is suitable to re-express the response functions in terms of derivatives with respect to temperature and density.
@@ -584,6 +588,19 @@ Using these two formulas we obtain the isothermal compressibility in explicit fo
 \end{eqnarray}	
 
 \begin{thebibliography}{9}
+	
+	\bibitem{Johnston2014book} D.~C.~Johnston.
+	\href{https://dx.doi.org/10.1088/978-1-627-05532-1}{Advances in Thermodynamics of the van der {W}aals Fluid}, (Morgan \& Claypool Publishers, 2014) [doi: 10.1088/978-1-627-05532-1]
+	
+	\bibitem{YigzaweSadus2013} T.~M. Yigzawe, R.~J. Sadus.
+	\href{https://doi.org/10.1063/1.4803855}{Intermolecular interactions and the thermodynamic properties of supercritical fluids}, \textit{J. Chem. Phys.} \textbf{138}, 194502 (2013) [doi: 10.1063/1.4803855]
+		
+	\bibitem{Velasco2011} I~Velasco, C.~Rivas, J.~F.~Martinez-Lopez {\it et~al.}
+	\href{https://pubs.acs.org/doi/abs/10.1021/jp202317n}{Accurate values of some thermodynamic properties for carbon dioxide, ethane, propane, and some binary mixtures}, \textit{J. Phys. Chem. B} \textbf{115}, 8216 (2011) [doi: 10.1021/jp202317n] 
+	
+	\bibitem{Bulavin2024} L.~A.~Bulavin, Y.~G.~Rudnikov, A.~V.~Chalyi.
+	\href{https://pubs.aip.org/aip/adv/article/14/8/085213/3307287}{Contributions to the isothermal compressibility coefficient of water near the temperature of 42$^{\circ}$ C}, \textit{AIP Advances} \textbf{14}, 085213 (2024) [doi: 10.1063/5.0205612] 
+	
 	\bibitem{KozitskyKozlovskiiDobush2018book} Y.~Kozitsky, M.~Kozlovskii, O.~Dobush.
 	\href{https://link.springer.com/chapter/10.1007/978-3-319-61109-9_11}{Phase transitions in a continuum curie-weiss system: A quantitative analysis.}, in: L.~A.~Bulavin, A.~V.~Chalyi (Eds.), \textit{Modern Problems of Molecular Physics} (Springer, 2018) [doi: 10.1007/978-3-319-61109-9\_11]
 		
@@ -628,8 +645,6 @@ Using these two formulas we obtain the isothermal compressibility in explicit fo
 	
 	\bibitem{HansenMcDonald2013} J.~Hansen, I.~McDonald. \textit{Theory of Simple Liquids: with Applications to Soft Matter.} 4th Edition (Academic Press, 2013) [ISBN: 9780123870339]
 	
-	\bibitem{YigzaweSadus2013} T.~M. Yigzawe, R.~J. Sadus.
-	\href{https://doi.org/10.1063/1.4803855}{Intermolecular interactions and the thermodynamic properties of supercritical fluids}, \textit{J. Chem. Phys.} \textbf{138}, 194502 (2013) [doi: 10.1063/1.4803855]
 		
 \end{thebibliography}
 	
