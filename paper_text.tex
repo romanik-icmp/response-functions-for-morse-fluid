@@ -1,13 +1,13 @@
 \section{Introduction}
 
-Thermodynamic response functions play a crucial role in understanding and characterizing the behavior of physical systems. These functions describe how a system responds to changes in its state variables, providing valuable insights into its thermodynamic properties. The most widely studied thermodynamic response functions of fluids are isothermal and adiabatic compressibilities, isobaric thermal expansion, isochoric thermal pressure coefficient and heat capacities either at constant pressure or at constant volume. Thermodynamic response functions are essential tools for understanding, predicting, and controlling the behavior of physical systems. They are used in various scientific and engineering disciplines to model, design, and optimize processes and to gain insights into the fundamental principles governing thermodynamic systems. Therefore, a key area of research involves examining the thermodynamic properties of simple fluids and fluid models through theoretical approaches, computer simulations, and experimental studies, covering both subcritical and supercritical regions.~\cite{Johnston2014book,YigzaweSadus2013,Velasco2011,Bulavin2024}. 
+Thermodynamic response functions play a crucial role in understanding and characterizing the behavior of physical systems. These functions describe how a system responds to changes in its state variables, providing valuable insights into its thermodynamic properties. The most widely studied thermodynamic response functions of fluids are isothermal and adiabatic compressibilities, isobaric thermal expansion, isochoric thermal pressure coefficient and heat capacities either at constant pressure or at constant volume. Thermodynamic response functions are essential tools for understanding, predicting, and controlling the behavior of physical systems. They are used in various scientific and engineering disciplines to model, design, and optimize processes and to gain insights into the fundamental principles governing thermodynamic systems. Therefore, a key area of research involves examining the thermodynamic properties of simple fluids and fluid models through theoretical approaches, computer simulations, and experimental studies, covering both subcritical and supercritical regions~\cite{Johnston2014book,YigzaweSadus2013,Velasco2011,Bulavin2024}. 
 
 
 In this work we continue our study of the thermodynamic behavior of a cell fluid model, which was defined in~\cite{KozitskyKozlovskiiDobush2018book,KozitskyKozlovskiiDobush2020}. This model was used with the Morse potential in studies~\cite{PylyukEtAlJML2023,PylyukKozlovskiiDobushUJP2023b} and with a modified Morse potential in~\cite{KozlovskiiDobush2020,PylyukDobush2020} as potentials describing the particle interaction. In particular, the equation of state was obtained in~\cite{KozlovskiiDobush2020} in the zero-mode approximation. This equation of state is used in the current work to calculate thermodynamic response functions, namely the isothermal compressibility, the thermal pressure coefficient, and the thermal expansion coefficient. 
 
 As the problem has been considered in the framework of the grand canonical ensemble, the initial equation of state is formulated in terms of pressure $P$, temperature $T$ and the chemical potential $\mu$, $P = P(T,\mu)$. To leverage this form of the equation of state for calculation of the response functions, the corresponding definitions should be transformed to proper derivatives with respect to temperature and chemical potential~\cite{StrokerMeier2021}. For each response function considered in this paper, we present such transformation in a dedicated subsection. On the other hand, within the approach applied here, the chemical potential can be explicitly expressed via the number particle density $\rho$ and temperature. This gives rise to the equation of state in the form $P = P(T, \rho)$, in which case it is suitable to re-express the response functions in terms of derivatives with respect to temperature and density.
 
-In Section~\ref{sec:potential} we present the modified Morse potential used in our work, and briefly compare it with other possible modifications. Section~\ref{sec:eos} is dedicated to the explicit expressions for the equation of state. In Section~\ref{sec:respons_functions} the expressions for response functions are derived in terms of thermodynamic derivatives suitable for different forms of the equation of state.
+In Section~\ref{sec:potential}, we present the modified Morse potential used in our work, and briefly compare it with other possible modifications. Section~\ref{sec:eos} is dedicated to the explicit expressions for the equation of state. In Section~\ref{sec:respons_functions}, the expressions for response functions are derived in terms of thermodynamic derivatives suitable for different forms of the equation of state.
 
 
 \section{\label{sec:potential}The interaction potential}
@@ -118,9 +118,9 @@ The function $E_\mu(M, T)$ from the equation \eqref{eq:eosMT} is provided by
 	&& - \frac{g_3}{g_4} {M} \! - \frac{g_3^2}{2 g_4^2}  d - \frac{1}{24} \frac{g_3^4}{g_4^3}. 
 \end{eqnarray}
 Here the quantity $N_v$ defines the number of cubic cells in volume $V$ for the initial model.
-In the thermodynamic limit, $N_v \to \infty$, and thus the first term can be neglected. The term $\tilde{\mu}/W(0)$ can be expressed in terms of $M$ using~\eqref{chem_pot}. The temperature and the inverse temperature can always be expressed in terms of the reduced temperature and a corresponding critical value:
+In the thermodynamic limit, $N_v \to \infty$, and thus, the first term can be neglected. The term $\tilde{\mu}/W(0)$ can be expressed in terms of $M$ using~\eqref{chem_pot}. The temperature and the inverse temperature can always be expressed in terms of the reduced temperature and a corresponding critical value:
 \begin{equation*}
-	T = T_c(1+\tau), \quad \beta = \beta_c (1 + \tau)^{-1}
+	T = T_c(1+\tau), \quad \beta = \beta_c (1 + \tau)^{-1}.
 \end{equation*} 
 
 The quantity $\bar{\rho}_0$ is a solution to the following cubic equation
@@ -266,15 +266,15 @@ or
 \end{equation}
 Substituting this into the last expression for $\kappa_T$, one gets
 \begin{equation}
-	\kappa_T = \frac{1}{\rho^2} \left(\frac{\partial \rho}{\partial \mu}\right)_{T}
+	\kappa_T = \frac{1}{\rho^2} \left(\frac{\partial \rho}{\partial \mu}\right)_{T} .
 \end{equation}
 Finally, from~\eqref{eq:rho_dpdm} it follows that
 \begin{equation}
-	\left(\frac{\partial \rho}{\partial \mu}\right)_T = \left(\frac{\partial^2 P}{\partial \mu^2}\right)_T
+	\left(\frac{\partial \rho}{\partial \mu}\right)_T = \left(\frac{\partial^2 P}{\partial \mu^2}\right)_T ,
 \end{equation}
 and ultimately we arrive at the very useful expression for the isothermal compressibility
 \begin{equation}
-	\kappa_T = \frac{1}{\rho^2} \left(\frac{\partial^2 P}{\partial \mu^2}\right)_{T}
+	\kappa_T = \frac{1}{\rho^2} \left(\frac{\partial^2 P}{\partial \mu^2}\right)_{T} .
 \end{equation}
 
 Let us introduce the reduced isothermal compressibility
@@ -328,7 +328,7 @@ The thermal pressure coefficient is defined by
 	\label{def:therm_pres_coef}
 	\beta_V = \left( \frac{\partial P}{\partial T} \right)_{V,N}.
 \end{equation}
-We rewrite $\beta_V$ into a form that is suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced}
+We rewrite $\beta_V$ into a form that is suitable for the equation of state $P=P(T,\mu)$, see~\eqref{eq:eosMT} and~\eqref{eq:eosPTM_reduced},
 \begin{eqnarray}
 	\beta_V	& = & \left(\frac{\partial P}{\partial T}\right)_{\mu} + \left(\frac{\partial P}{\partial \mu}\right)_T \left(\frac{\partial \mu}{\partial T}\right)_{V, N}.
 \end{eqnarray}
@@ -469,7 +469,7 @@ If it is preferable to use the equation of state in the form $P=P(T, \rho^*)$, s
 \end{equation}
 to get for $\alpha_P$
 \begin{equation}
-	\alpha_P = \frac{1}{\rho} \left(\frac{\partial P}{\partial T}\right)_{\rho} \left(\frac{\partial P}{\partial \rho}\right)^{-1}_T.
+	\alpha_P = \frac{1}{\rho} \left(\frac{\partial P}{\partial T}\right)_{\rho} \left(\frac{\partial P}{\partial \rho}\right)^{-1}_T ,
 \end{equation}
 or for $\alpha^*_P$
 \begin{equation}
